@@ -200,6 +200,22 @@
   }
 }
 
+.appear {
+  animation: appear 1.5s ease-in-out;
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: .9;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 @media (max-height: 450px) {
   #link-info {
     bottom: 0;

@@ -8,11 +8,11 @@ const Dabot: React.FC = () => {
   const [activeImage, setActiveImage] = useState<number | null>(null);
 
   const features = [
-    ".weather milan",
-    ".translate chinese",
-    ".museum a great day!",
-    ".biblegame",
-    ".bibleverse",
+    { text: ".museum a great day!", type: "museum" },
+    { text: ".weather milan", type: "weather" },
+    { text: ".translate chinese", type: "translate" },
+    { text: ".biblegame", type: "bible" },
+    { text: ".bibleverse", type: "bible" },
   ];
 
   const handleImageClick = (index: number) => {
@@ -25,7 +25,7 @@ const Dabot: React.FC = () => {
         project={{
           title: "dabot",
           logoPath: "/assets/images/dabot/projectlogo.png",
-          year: "2020",
+          year: "2020 - present",
           languages: "JavaScript",
           siteUrl: "https://github.com/dawillu/dabot",
           siteName: "explore the code",
@@ -61,22 +61,12 @@ const Dabot: React.FC = () => {
 
       <div id="deep-description-container">
         <ProjectWideDescription
-          title="a PERSONAL TOUCH"
+          title="A PERSONAL TOUCH"
           label="CAPTURING, STORING, REVIVING MOMENTS"
-          description='The creation of dabot came from a desire to preserve the moments
-              that made our group chat special. I built a bot-only-writable
-              gallery called the "Museum" to capture photos and videos, turning
-              our fleeting memories into something permanent. With a simple
-              command, users could embed media, and an API would set the embed
-              color to match the dominant tone of the image or video, adding a
-              nostalgic, personal touch. What started as a fun way to relive
-              memories quickly became a virtual museum where we could visit the
-              past and keep those moments alive.'
+          description='dabot was created years ago with one simple idea: to hold onto the moments that made "Teverna Ammuffita" special. A bot-only gallery, called the "Museum," was built to capture photos and videos, turning those fleeting memories into something permanent. With just a simple command, users could embed media, and an API would pick up on the dominant color of the image or video, giving each post a nostalgic, personal touch. What began as a fun way to relive moments quickly grew into a virtual museum, where the group could go back and keep those cherished memories alive, even as time moved on.'
         />
 
-        <div 
-          className={styles.picturePile}
-        >
+        <div className={styles.picturePile}>
           {[1, 2, 3, 4, 5].map((_, index) => (
             <div
               key={index}
@@ -106,8 +96,12 @@ const Dabot: React.FC = () => {
 
         <div className={styles.scatteredContainer}>
           {features.map((feature, index) => (
-            <div key={index} className={styles.scatteredElement}  data-animation="down-up">
-              {feature}
+            <div
+              key={index}
+              className={styles.scatteredElement}
+              data-feature={feature.type}
+            >
+              {feature.text}
             </div>
           ))}
         </div>

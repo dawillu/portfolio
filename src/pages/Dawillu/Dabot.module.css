@@ -24,8 +24,31 @@
 }
 
 .scatteredElement:hover {
-  background: rgba(248, 237, 221, 0.15);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.scatteredElement[data-feature="weather"]:hover {
+  background: rgba(135, 206, 235, 0.15);
+  box-shadow: 0 8px 20px rgba(135, 206, 235, 0.2);
+  transform: translateY(-2px);
+}
+
+.scatteredElement[data-feature="translate"]:hover {
+  background: rgba(144, 238, 144, 0.15);
+  box-shadow: 0 8px 20px rgba(144, 238, 144, 0.2);
+  transform: scale(1.05);
+}
+
+.scatteredElement[data-feature="museum"]:hover {
+  background: rgba(255, 192, 203, 0.15);
+  box-shadow: 0 8px 20px rgba(255, 192, 203, 0.2);
+  transform: rotate(2deg);
+}
+
+.scatteredElement[data-feature="bible"]:hover {
+  background: rgba(255, 215, 0, 0.15);
+  box-shadow: 0 8px 20px rgba(255, 215, 0, 0.2);
+  transform: scale(1.02) translateY(-1px);
 }
 
 @media (max-width: 768px) {
