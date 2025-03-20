@@ -1,3 +1,5 @@
+import { Link } from "react-scroll";
+
 interface ProjectHeaderProps {
   title: string;
   logoUrl: string;
@@ -15,19 +17,11 @@ const ProjectHeader: React.FC<ProjectHeaderProps> = ({
   languages,
   siteUrl,
   siteName,
-  backgroundStyles
+  backgroundStyles,
 }) => {
   return (
-    <header
-      id="project-logo"
-      className="project-logo"
-      style={backgroundStyles}
-    >
-      <img
-        src={logoUrl}
-        alt={`${title} logo`}
-        loading="eager"
-      />
+    <header id="project-logo" className="project-logo" style={backgroundStyles}>
+      <img src={logoUrl} alt={`${title} logo`} loading="eager" />
       <div id="link-info">
         <div>
           <span>Year</span>
@@ -53,7 +47,14 @@ const ProjectHeader: React.FC<ProjectHeaderProps> = ({
           </a>
         </div>
       </div>
-      <div id="arrow" className="arrow" aria-hidden="true" />
+      <Link
+        to="description-container"
+        smooth={true}
+        duration={1000}
+        className="arrow"
+        id="arrow"
+        aria-hidden="true"
+      ></Link>
     </header>
   );
 };

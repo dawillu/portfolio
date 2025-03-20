@@ -2,6 +2,7 @@ import Loader from "./components/ui/Loader/Loader";
 import Navbar from "./components/Navbar/Navbar";
 import Welcome from "./components/WelcomeSection/Welcome";
 import ProjectsSection from "./components/ProjectsSection/ProjectsSection";
+import ContactSection from "./components/ContactSection/ContactSection";
 import AboutSection from "./components/AboutSection/AboutSection";
 import Footer from "./components/Footer/Footer";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
@@ -26,6 +27,7 @@ function App() {
                 <Welcome />
                 <ProjectsSection />
                 <AboutSection />
+                <ContactSection />
                 <Footer />
               </>
             }

@@ -100,6 +100,7 @@ const Dabot: React.FC = () => {
               key={index}
               className={styles.scatteredElement}
               data-feature={feature.type}
+              data-animation="fade-in"
             >
               {feature.text}
             </div>

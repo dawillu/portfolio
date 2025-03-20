@@ -1,5 +1,5 @@
-import ProjectNavigation from '../components/layouts/ProjectLayout/components/ProjectNavigation';
-import ProjectLayout from '../components/layouts/ProjectLayout/ProjectLayout';
+import ProjectNavigation from "../components/layouts/ProjectLayout/components/ProjectNavigation";
+import ProjectLayout from "../components/layouts/ProjectLayout/ProjectLayout";
 
 const TicTacToe: React.FC = () => {
   return (
@@ -15,40 +15,39 @@ const TicTacToe: React.FC = () => {
           contentSections: [
             {
               type: "description",
-              headTitle: "Where strategy meets simplicity—every move counts in the ultimate battle",
+              headTitle:
+                "Where strategy meets simplicity—every move counts in the ultimate battle",
               sections: [
                 {
                   title: "THE LOGO",
                   label: "SIMPLE, STRATEGIC, COMPETITIVE",
                   description: `I chose the 'CROSS and CIRCLE' for the logo because they are the core 
                     symbols of this game. They represent the simplicity, strategy, and competitive nature 
-                    of the game, making the logo instantly recognizable and timeless.`
+                    of the game, making the logo instantly recognizable and timeless.`,
                 },
                 {
                   title: "FEATURES",
                   label: "ENGAGING, DYNAMIC, VIBRANT",
                   description: `Sounds for each move, with a cheerful chime for color theme change. 
                     The clean design and smooth animations were created entirely with CSS, providing 
-                    a seamless and interactive interface.`
-                }
-              ]
+                    a seamless and interactive interface.`,
+                },
+              ],
             },
             {
               type: "gallery",
               images: [
-                '/assets/images/tictactoe/paperlogo.png',
-                '/assets/images/tictactoe/plastifiedposter.png'
-              ]
-            }
+                "/assets/images/tictactoe/paperlogo.png",
+                "/assets/images/tictactoe/plastifiedposter.png",
+              ],
+            },
           ],
-          backgroundColor: '#b8c8c1',
-          backgroundImage: '',
-          lightBackground: true
+          backgroundColor: "#b8c8c1",
+          backgroundImage: "",
+          lightBackground: true,
         }}
       />
-      <ProjectNavigation
-        nextPath='/'
-      />
+      <ProjectNavigation nextPath="/" />
     </>
   );
 };

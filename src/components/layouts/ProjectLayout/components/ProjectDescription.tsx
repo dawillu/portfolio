@@ -11,10 +11,13 @@ interface ProjectDescriptionProps {
 
 const ProjectDescription: React.FC<ProjectDescriptionProps> = ({
   headTitle,
-  sections
+  sections,
 }) => {
   return (
-    <main id="description-container" className={!headTitle ? 'no-header-padding' : ''}>
+    <main
+      id="description-container"
+      className={!headTitle ? "no-header-padding" : ""}
+    >
       {headTitle && (
         <div className="head-title" data-animation="fade-in">
           {headTitle}
@@ -29,7 +32,9 @@ const ProjectDescription: React.FC<ProjectDescriptionProps> = ({
             <div className="subheading-title">{section.title}</div>
             <div
               className="subheading-title-label"
-              data-animation={index % 2 === 0 ? "fade-in-left" : "fade-in-right"}
+              data-animation={
+                index % 2 === 0 ? "fade-in-left" : "fade-in-right"
+              }
             >
               {section.label}
             </div>

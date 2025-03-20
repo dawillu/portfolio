@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
 import Navbar from "../../Navbar/Navbar";
 import "./ProjectLayout.css";
-import ProjectHeader from './components/ProjectHeader';
-import ProjectDescription from './components/ProjectDescription';
-import ProjectGallery from './components/ProjectGallery';
+import ProjectHeader from "./components/ProjectHeader";
+import ProjectDescription from "./components/ProjectDescription";
+import ProjectGallery from "./components/ProjectGallery";
 
 interface Section {
   title: string;
@@ -12,7 +12,7 @@ interface Section {
 }
 
 interface ContentSection {
-  type: 'description' | 'gallery';
+  type: "description" | "gallery";
   headTitle?: string;
   sections?: Section[];
   images?: string[];
@@ -39,35 +39,31 @@ const ProjectLayout: React.FC<ProjectLayoutProps> = ({ project }) => {
   useEffect(() => {
     document.title = `${project.title} · dawillu`;
 
-    const arrowElement = document.getElementById("arrow");
-    const descriptionElement = document.getElementById("description-container");
-
-    if (arrowElement && descriptionElement) {
-      arrowElement.addEventListener("click", () => {
-        descriptionElement.scrollIntoView({ behavior: "smooth" });
-      });
-    }
-
     const elements = document.querySelectorAll<HTMLElement>("[data-animation]");
     elements.forEach((el) => (el.style.visibility = "hidden"));
 
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          const animation = entry.target.getAttribute("data-animation");
-          if (animation) {
-            entry.target.classList.add(animation);
-            (entry.target as HTMLElement).style.visibility = "visible";
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const animation = entry.target.getAttribute("data-animation");
+            if (animation) {
+              entry.target.classList.add(animation);
+              (entry.target as HTMLElement).style.visibility = "visible";
+            }
+            observer.unobserve(entry.target);
           }
-          observer.unobserve(entry.target);
-        }
-      });
-    });
+        });
+      },
+      {
+        rootMargin: "50px 0px 0px 0px",
+        threshold: 0,
+      }
+    );
 
     elements.forEach((element) => observer.observe(element));
 
     return () => {
-      if (arrowElement) arrowElement.removeEventListener("click", () => {});
       observer.disconnect();
     };
   }, [project.title]);
@@ -125,17 +121,14 @@ const ProjectLayout: React.FC<ProjectLayoutProps> = ({ project }) => {
 
       {project.contentSections.map((section, index) => (
         <React.Fragment key={index}>
-          {section.type === 'description' && section.sections && (
+          {section.type === "description" && section.sections && (
             <ProjectDescription
-              headTitle={section.headTitle || ''}
+              headTitle={section.headTitle || ""}
               sections={section.sections}
             />
           )}
-          {section.type === 'gallery' && section.images && (
-            <ProjectGallery
-              images={section.images}
-              title={project.title}
-            />
+          {section.type === "gallery" && section.images && (
+            <ProjectGallery images={section.images} title={project.title} />
           )}
         </React.Fragment>
       ))}

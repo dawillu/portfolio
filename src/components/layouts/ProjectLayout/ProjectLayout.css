@@ -14,8 +14,7 @@
 
 @font-face {
   font-family: "Sohne";
-  src: url("/assets/fonts/Sohne/Sohne-Dreiviertelfett.otf")
-    format("opentype");
+  src: url("/assets/fonts/Sohne/Sohne-Dreiviertelfett.otf") format("opentype");
   font-weight: 600;
   font-style: normal;
 }
@@ -38,8 +37,7 @@
 
 @font-face {
   font-family: "Sohne";
-  src: url("/assets/fonts/Sohne/Sohne-ExtrafettKursiv.otf")
-    format("opentype");
+  src: url("/assets/fonts/Sohne/Sohne-ExtrafettKursiv.otf") format("opentype");
   font-weight: 800;
   font-style: italic;
 }
@@ -53,8 +51,7 @@
 
 @font-face {
   font-family: "Sohne";
-  src: url("/assets/fonts/Sohne/Sohne-ExtraleichtKursiv.otf")
-    format("opentype");
+  src: url("/assets/fonts/Sohne/Sohne-ExtraleichtKursiv.otf") format("opentype");
   font-weight: 200;
   font-style: italic;
 }
@@ -82,8 +79,7 @@
 
 @font-face {
   font-family: "Sohne";
-  src: url("/assets/fonts/Sohne/Sohne-HalbfettKursiv.otf")
-    format("opentype");
+  src: url("/assets/fonts/Sohne/Sohne-HalbfettKursiv.otf") format("opentype");
   font-weight: 500;
   font-style: italic;
 }
@@ -209,7 +205,7 @@
     opacity: 0;
   }
   50% {
-    opacity: .9;
+    opacity: 0.9;
   }
   100% {
     opacity: 1;
