@@ -74,13 +74,16 @@ const Dabot: React.FC = () => {
               past and keep those moments alive.'
         />
 
-        <div className={styles.picturePile}>
+        <div 
+          className={styles.picturePile}
+        >
           {[1, 2, 3, 4, 5].map((_, index) => (
             <div
               key={index}
               className={`${styles.pileImage} ${
                 activeImage === index ? styles.active : ""
               }`}
+              data-animation="fade-in"
               onClick={() => handleImageClick(index)}
               style={{
                 backgroundImage: `url('/assets/images/dabot/pile/${
@@ -96,14 +99,14 @@ const Dabot: React.FC = () => {
         <ProjectWideDescription
           title="COMMAND LIST"
           label="EXPLORE THE POSSIBILITIES"
-          description='dabot responds to various commands, each designed to enhance your
+          description="dabot responds to various commands, each designed to enhance your
               Discord experience. From weather updates to translations, every
-              command is crafted for seamless interaction.'
+              command is crafted for seamless interaction."
         />
 
-        <div className={styles.scatteredContainer} data-animation="fade-in">
+        <div className={styles.scatteredContainer}>
           {features.map((feature, index) => (
-            <div key={index} className={styles.scatteredElement}>
+            <div key={index} className={styles.scatteredElement}  data-animation="down-up">
               {feature}
             </div>
           ))}

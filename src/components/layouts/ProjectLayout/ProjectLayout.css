@@ -280,7 +280,7 @@
 }
 
 .fade-in {
-  animation: fade-in 3s;
+  animation: fade-in 2s;
 }
 
 @keyframes fade-in {
@@ -293,12 +293,12 @@
 }
 
 .down-up {
-  animation: down-up 2s;
+  animation: down-up 3s;
 }
 
 @keyframes down-up {
   0% {
-    transform: translateY(100vh);
+    transform: translateY(20vh);
     opacity: 0;
   }
   100% {

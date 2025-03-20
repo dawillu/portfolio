@@ -4,7 +4,6 @@
   width: 90%;
   margin: 0 auto;
   gap: 2rem;
-  overflow: hidden;
 }
 
 .scatteredElement {
@@ -118,19 +117,4 @@
     width: 180px;
     height: 130px;
   }
-}
-
-.subheadingTitle {
-  font-weight: 400;
-  padding-top: 4vh;
-  font-size: calc(10px + 1vw);
-}
-
-.subheadingTitleLabel {
-  font-weight: 900;
-  font-size: calc(15px + 1.5vw);
-}
-
-.description {
-  font-size: calc(10px + 0.7vw);
 }
