@@ -23,7 +23,7 @@ const Welcome: React.FC = () => {
   return (
     <div id="start" className="head">
       <video autoPlay loop muted playsInline id="background-video">
-        <source src="src/assets/videos/welcome.mp4" type="video/mp4" />
+        <source src="/assets/videos/welcome.mp4" type="video/mp4" />
       </video>
       <div className="mixBlendMode">
         <h1>

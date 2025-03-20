@@ -14,7 +14,7 @@ const Navbar: React.FC = () => {
           <div id="left-nav">
             <a href="/" className="logo">
               <div className="icon container">
-                <img id="nav-logo" src="src/assets/logo.png" alt="Logo" />
+                <img id="nav-logo" src="/assets/logo.png" alt="Logo" />
               </div>
             </a>
           </div>

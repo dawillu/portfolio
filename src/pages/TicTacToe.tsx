@@ -7,7 +7,7 @@ const TicTacToe: React.FC = () => {
       <ProjectLayout
         project={{
           title: "tictactoe",
-          logoPath: "src/assets/images/tictactoe/projectlogo.png",
+          logoPath: "/assets/images/tictactoe/projectlogo.png",
           year: "2020",
           languages: "HTML CSS JS",
           siteUrl: "https://tictactoe-dawillu.vercel.app",
@@ -36,8 +36,8 @@ const TicTacToe: React.FC = () => {
             {
               type: "gallery",
               images: [
-                'src/assets/images/tictactoe/paperlogo.png',
-                'src/assets/images/tictactoe/plastifiedposter.png'
+                '/assets/images/tictactoe/paperlogo.png',
+                '/assets/images/tictactoe/plastifiedposter.png'
               ]
             }
           ],

@@ -4,25 +4,25 @@ import "./AboutSection.css";
 const AboutSection: React.FC = () => {
   const images = [
     {
-      src: "src/assets/images/aboutGrid/bouldering.jpg",
+      src: "/assets/images/aboutGrid/bouldering.jpg",
     },
     {
-      src: "src/assets/images/aboutGrid/snowboard.jpg",
+      src: "/assets/images/aboutGrid/snowboard.jpg",
     },
     {
-      src: "src/assets/images/aboutGrid/food.jpg",
+      src: "/assets/images/aboutGrid/food.jpg",
     },
     {
-      src: "src/assets/images/aboutGrid/photo.jpg",
+      src: "/assets/images/aboutGrid/photo.jpg",
     },
   ];
 
   const hiddenImages = [
     {
-      src: "src/assets/images/aboutGrid/photo1.jpg",
+      src: "/assets/images/aboutGrid/photo1.jpg",
     },
     {
-      src: "src/assets/images/aboutGrid/coffe.jpg",
+      src: "/assets/images/aboutGrid/coffe.jpg",
     },
   ];
 

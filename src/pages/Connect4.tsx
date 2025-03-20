@@ -7,7 +7,7 @@ const Connect4: React.FC = () => {
       <ProjectLayout 
         project={{
           title: "connect4",
-          logoPath: "src/assets/images/connect4/projectlogo.png",
+          logoPath: "/assets/images/connect4/projectlogo.png",
           year: "2022",
           languages: "HTML CSS JS / C#",
           siteUrl: "",
@@ -37,11 +37,11 @@ const Connect4: React.FC = () => {
             },
             {
               type: "gallery",
-              images: ["src/assets/images/connect4/poster.png"]
+              images: ["/assets/images/connect4/poster.png"]
             },
           ],
           backgroundColor: '#242424',
-          backgroundImage: 'src/assets/images/connect4/background.jpg',
+          backgroundImage: '/assets/images/connect4/background.jpg',
           lightBackground: false
         }}
       />

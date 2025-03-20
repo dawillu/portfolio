@@ -5,7 +5,7 @@ const Footer: React.FC = () => {
   return (
     <footer className="container footer font-primary">
       <div id="title">
-        <img id="footer-logo" src="src/assets/logo.png" alt="Footer Logo" />
+        <img id="footer-logo" src="/assets/logo.png" alt="Footer Logo" />
       </div>
       <div id="socials" className="container">
         <a
@@ -16,7 +16,7 @@ const Footer: React.FC = () => {
         >
           <img
             className="social-icon"
-            src="src/assets/socials/github.svg"
+            src="/assets/socials/github.svg"
             alt="GitHub Icon"
           />
         </a>
@@ -28,7 +28,7 @@ const Footer: React.FC = () => {
         >
           <img
             className="social-icon"
-            src="src/assets/socials/instagram.svg"
+            src="/assets/socials/instagram.svg"
             alt="Instagram Icon"
           />
         </a>
@@ -40,7 +40,7 @@ const Footer: React.FC = () => {
         >
           <img
             className="social-icon"
-            src="src/assets/socials/linkedin.svg"
+            src="/assets/socials/linkedin.svg"
             alt="LinkedIn Icon"
           />
         </a>
@@ -52,7 +52,7 @@ const Footer: React.FC = () => {
         >
           <img
             className="social-icon"
-            src="src/assets/socials/x.svg"
+            src="/assets/socials/x.svg"
             alt="X Icon"
           />
         </a>

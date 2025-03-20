@@ -24,7 +24,7 @@ const Dabot: React.FC = () => {
       <ProjectLayout
         project={{
           title: "dabot",
-          logoPath: "src/assets/images/dabot/projectlogo.png",
+          logoPath: "/assets/images/dabot/projectlogo.png",
           year: "2020",
           languages: "JavaScript",
           siteUrl: "https://github.com/dawillu/dabot",
@@ -50,7 +50,7 @@ const Dabot: React.FC = () => {
             },
             {
               type: "gallery",
-              images: ["src/assets/images/dabot/poster.png"],
+              images: ["/assets/images/dabot/poster.png"],
             },
           ],
           backgroundColor: "#f8eddd",
@@ -83,7 +83,7 @@ const Dabot: React.FC = () => {
               }`}
               onClick={() => handleImageClick(index)}
               style={{
-                backgroundImage: `url('src/assets/images/dabot/pile/${
+                backgroundImage: `url('/assets/images/dabot/pile/${
                   index + 1
                 }.jpg')`,
                 backgroundSize: "cover",

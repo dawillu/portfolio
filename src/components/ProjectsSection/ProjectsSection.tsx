@@ -14,25 +14,25 @@ const projects: Project[] = [
     id: "dawillu",
     name: "DAWILLU",
     path: "",
-    image: "src/assets/images/dawillu.png",
+    image: "/assets/images/dawillu.png",
   },
   {
     id: "dabot",
     name: "DABOT",
     path: "/dabot",
-    image: "src/assets/images/dabot.png",
+    image: "/assets/images/dabot.png",
   },
   {
     id: "connect4",
     name: "CONNECT4",
     path: "/Connect4",
-    image: "src/assets/images/connect4.png",
+    image: "/assets/images/connect4.png",
   },
   {
     id: "tictactoe",
     name: "TICTACTOE",
     path: "/TicTacToe",
-    image: "src/assets/images/tictactoe.png",
+    image: "/assets/images/tictactoe.png",
   },
 ];
 
