@@ -1,0 +1,61 @@
+interface ProjectHeaderProps {
+  title: string;
+  logoUrl: string;
+  year: string;
+  languages: string;
+  siteUrl: string;
+  siteName: string;
+  backgroundStyles?: React.CSSProperties;
+}
+
+const ProjectHeader: React.FC<ProjectHeaderProps> = ({
+  title,
+  logoUrl,
+  year,
+  languages,
+  siteUrl,
+  siteName,
+  backgroundStyles
+}) => {
+  return (
+    <header
+      id="project-logo"
+      className="project-logo"
+      style={backgroundStyles}
+    >
+      <img
+        src={logoUrl}
+        alt={`${title} logo`}
+        loading="eager"
+      />
+      <div id="link-info">
+        <div>
+          <span>Year</span>
+          <br />
+          {year}
+        </div>
+        <div>
+          <span>Language</span>
+          <br />
+          {languages}
+        </div>
+        <div>
+          <span>Site</span>
+          <br />
+          <a
+            className="project-link"
+            href={siteUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={`Visit ${siteName}`}
+          >
+            {siteName}
+          </a>
+        </div>
+      </div>
+      <div id="arrow" className="arrow" aria-hidden="true" />
+    </header>
+  );
+};
+
+export default ProjectHeader;

@@ -1,0 +1,136 @@
+.scatteredContainer {
+  padding-top: 30px;
+  position: relative;
+  width: 90%;
+  margin: 0 auto;
+  gap: 2rem;
+  overflow: hidden;
+}
+
+.scatteredElement {
+  margin-top: 20px;
+  width: fit-content;
+  position: relative;
+  padding: 1.2rem 2.5rem;
+  background: rgba(248, 237, 221, 0.08);
+  border: 1px solid rgba(248, 237, 221, 0.15);
+  border-radius: 12px;
+  color: #fff;
+  font-size: 1.1rem;
+  backdrop-filter: blur(8px);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  cursor: pointer;
+}
+
+.scatteredElement:hover {
+  background: rgba(248, 237, 221, 0.15);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+@media (max-width: 768px) {
+  .scatteredContainer {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .scatteredElement {
+    font-size: 1rem;
+    padding: 1rem 2rem;
+  }
+}
+
+.picturePile {
+  position: relative;
+  width: 100%;
+  min-height: 600px;
+  margin-top: 12%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pileImage {
+  cursor: zoom-in;
+  position: absolute;
+  width: 400px;
+  height: 300px;
+  transition: all 0.4s cubic-bezier(1, -0.68, 0.74, 0.99);
+  border: 4px solid #eae1e1;
+  border-bottom: 30px solid #eae1e1;
+  border-radius: 3px;
+}
+
+.pileImage:nth-child(1) {
+  left: 50%;
+  top: 30%;
+  transform: translate(-50%, -50%) rotate(-7deg);
+  z-index: 3;
+}
+
+.pileImage:nth-child(2) {
+  left: 35%;
+  top: 60%;
+  transform: translate(-50%, -50%) rotate(10deg);
+  z-index: 4;
+}
+
+.pileImage:nth-child(3) {
+  left: 60%;
+  top: 48%;
+  transform: translate(-50%, -50%) rotate(-5deg);
+  z-index: 5;
+}
+
+.pileImage:nth-child(4) {
+  left: 75%;
+  top: 40%;
+  transform: translate(-50%, -50%) rotate(5deg);
+  z-index: 1;
+}
+
+.pileImage:nth-child(5) {
+  left: 30%;
+  top: 30%;
+  transform: translate(-50%, -50%) rotate(-15deg);
+  z-index: 2;
+}
+
+.pileImage.active {
+  transform: translate(-50%, -50%) rotate(0deg) scale(1.5);
+  z-index: 6;
+}
+
+@media (max-width: 768px) {
+  .pileImage {
+    width: 230px;
+    height: 180px;
+  }
+
+  .picturePile {
+    min-height: 400px;
+  }
+}
+
+@media (max-width: 480px) {
+  .pileImage {
+    width: 180px;
+    height: 130px;
+  }
+}
+
+.subheadingTitle {
+  font-weight: 400;
+  padding-top: 4vh;
+  font-size: calc(10px + 1vw);
+}
+
+.subheadingTitleLabel {
+  font-weight: 900;
+  font-size: calc(15px + 1.5vw);
+}
+
+.description {
+  font-size: calc(10px + 0.7vw);
+}

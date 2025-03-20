@@ -1,0 +1,35 @@
+#loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #1a191a;
+}
+
+#loader {
+  margin: auto;
+  width: 80px;
+  height: 80px;
+  background-color: #ffffff;
+  animation: spin 1.5s forwards;
+}
+
+@keyframes spin {
+  0% {
+    transform: scale(0.5) rotate(180deg);
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+#content {
+  display: none;
+  min-height: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+#content.show {
+  opacity: 1;
+}

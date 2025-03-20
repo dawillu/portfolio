@@ -1,0 +1,53 @@
+.footer {
+  height: fit-content;
+  padding: 15% 5% 10px 5%;
+}
+
+#socials {
+  margin-bottom: 27px;
+  margin-right: 0;
+}
+
+#socials a {
+  transition: 0.3s ease;
+}
+
+@media (hover: hover) {
+  #socials a:hover {
+    transform: scale(1.08);
+  }
+}
+
+.social-icon,
+#footer-logo {
+  height: 40px;
+  margin: 0 10px;
+}
+
+.social-icon {
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(4deg)
+    brightness(102%) contrast(104%);
+}
+
+#title {
+  transition: 1s ease;
+  margin-bottom: 0;
+  margin-right: 20px;
+  margin-left: 0;
+  opacity: 0.8;
+  cursor: pointer;
+  width: 0;
+}
+
+#title img {
+  height: 100px;
+  margin-bottom: 27px;
+}
+
+@media (max-width: 620px) {
+  #title {
+    transition: 0s;
+    width: 0;
+    visibility: hidden;
+  }
+}
