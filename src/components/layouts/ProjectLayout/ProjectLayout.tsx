@@ -107,6 +107,8 @@ const ProjectLayout: React.FC<ProjectLayoutProps> = ({ project }) => {
     }),
   };
 
+  
+
   return (
     <>
       <Navbar />

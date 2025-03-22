@@ -3,11 +3,11 @@ import "./CreationsSection.css";
 
 const CreationsSection: React.FC = () => {
   return (
-    <>
+    <div id="creations">
       <div id="creations">ORIGINAL CREATIONS</div>
       <div className="creations-container">
         <div className="write-title">
-          <Link to="">
+          <Link to="/ThuesdaysWithMorrie">
             Thuesdays With Morrie <span> review of a book by Mitch Albom </span>
           </Link>
           <br />
@@ -20,7 +20,7 @@ const CreationsSection: React.FC = () => {
           </Link>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

@@ -1,0 +1,68 @@
+.title {
+  width: 100%;
+  font-size: calc(15px + 3vw);
+  font-weight: 1000;
+  padding-top: calc(env(safe-area-inset-top) + 100px);
+  text-align: center;
+}
+
+.label {
+  width: 100%;
+  font-size: calc(10px + 0.5vw);
+  position: relative;
+  top: -6px;
+  text-align: center;
+}
+
+.mainContainer {
+  padding-top: 30px;
+}
+
+.imgContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imgContainer > img {
+  width: 30%;
+  min-width: 300px;
+}
+
+.description {
+  margin-top: 40px;
+  padding: 0 20%;
+  font-size: calc(10px + 0.5vw);
+}
+
+.subheading {
+  font-size: calc(20px + 0.5vw);
+  font-weight: 600;
+  margin-top: 20px;
+}
+
+.paragraphTitle {
+  font-size: calc(15px + 0.5vw);
+  font-weight: 600;
+  margin-top: 8px;
+}
+
+.text {
+  padding-top: 1px;
+}
+
+.quote {
+  font-size: calc(15px + 0.8vw);
+  font-weight: 800;
+  padding-top: 40px;
+  font-style: italic;
+  text-align: center;
+  margin: 0 5%;
+}
+
+.quoteAuthor {
+  font-size: calc(15px + 0.5vw);
+  padding-top: 10px;
+  font-weight: 400;
+}

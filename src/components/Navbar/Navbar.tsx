@@ -45,12 +45,12 @@ const Navbar: React.FC = () => {
                   </li>
                   <li>
                     <Link
-                      to="contact"
+                      to="creations"
                       smooth={true}
                       duration={700}
                       className="menulink"
                     >
-                      contact
+                      creations
                     </Link>
                   </li>
                 </ul>

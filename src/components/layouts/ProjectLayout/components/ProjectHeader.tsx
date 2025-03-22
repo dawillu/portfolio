@@ -1,3 +1,4 @@
+import { useEffect, useRef } from "react";
 import { Link } from "react-scroll";
 
 interface ProjectHeaderProps {
@@ -21,10 +22,60 @@ const ProjectHeader: React.FC<ProjectHeaderProps> = ({
   siteName,
   backgroundStyles,
 }) => {
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const hasEndedRef = useRef(false);
+  const isMobileRef = useRef(false);
+
+  useEffect(() => {
+    if (!isVideoLogo || !videoRef.current) return;
+
+    const video = videoRef.current;
+    isMobileRef.current = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+    
+    const handleEnded = () => {
+      hasEndedRef.current = true;
+      video.currentTime = video.duration;
+    };
+
+    const handleVisibilityChange = () => {
+      if (!isMobileRef.current) return;
+
+      if (document.hidden) {
+        video.pause();
+      } else if (!hasEndedRef.current) {
+        video.currentTime = 0;
+        video.play().catch(() => {});
+      } else {
+        video.currentTime = video.duration;
+      }
+    };
+
+    video.addEventListener("ended", handleEnded);
+    document.addEventListener("visibilitychange", handleVisibilityChange);
+    
+    // Force video to play from start on mobile
+    if (isMobileRef.current) {
+      video.currentTime = 0;
+      video.play().catch(() => {});
+    }
+
+    return () => {
+      video.removeEventListener("ended", handleEnded);
+      document.removeEventListener("visibilitychange", handleVisibilityChange);
+    };
+  }, [isVideoLogo]);
+
   return (
     <header id="project-logo" className="project-logo" style={backgroundStyles}>
       {isVideoLogo ? (
-        <video id="video" autoPlay muted playsInline>
+        <video 
+          ref={videoRef}
+          id="video" 
+          autoPlay 
+          muted 
+          playsInline
+          preload="auto"
+        >
           <source src={logoUrl} type="video/mp4" />
         </video>
       ) : (
