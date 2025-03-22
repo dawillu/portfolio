@@ -4,15 +4,15 @@ import "./CreationsSection.css";
 const CreationsSection: React.FC = () => {
   return (
     <div id="creations">
-      <div id="creations">ORIGINAL CREATIONS</div>
+      <div className="creations">ORIGINAL CREATIONS</div>
       <div className="creations-container">
         <div className="write-title">
-          <Link to="/ThuesdaysWithMorrie">
-            Thuesdays With Morrie <span> review of a book by Mitch Albom </span>
+          <Link to="/TuesdaysWithMorrie">
+            Tuesdays With Morrie <span> review of a book by Mitch Albom </span>
           </Link>
           <br />
           <Link to="">
-            My August <span> a monthly vlog recap </span>
+            Agosto <span> august month vlog recap </span>
           </Link>
           <br />
           <Link to="">

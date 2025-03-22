@@ -11,7 +11,7 @@ import Dabot from "./pages/Dabot/Dabot";
 import Connect4 from "./pages/Connect4";
 import TicTacToe from "./pages/TicTacToe";
 import ScrollToTop from "./components/utils/ScrollToTop";
-import ThuesdaysWithMorrie from "./pages/ThusdaysWithMorrie/ThuesdaysWithMorrie";
+import TuesdaysWithMorrie from "./pages/TuesdaysWithMorrie/TuesdaysWithMorrie";
 
 function App() {
   return (
@@ -38,7 +38,7 @@ function App() {
           <Route path="/dabot" element={<Dabot />} />
           <Route path="/connect4" element={<Connect4 />} />
           <Route path="/tictactoe" element={<TicTacToe />} />
-          <Route path="/thuesdayswithmorrie" element={<ThuesdaysWithMorrie />} />
+          <Route path="/tuesdayswithmorrie" element={<TuesdaysWithMorrie />} />
         </Routes>
       </div>
     </Router>

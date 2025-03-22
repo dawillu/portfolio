@@ -1,15 +1,15 @@
-.creations-container {
-    margin: 0 5%;
-}
-
 #creations {
-    font-weight: 1000;
-    font-size: calc(30px + 2vw);
     padding: calc(70px + env(safe-area-inset-top)) 5% 0 5%;
 }
 
+.creations {
+    font-weight: 1000;
+    font-size: calc(30px + 2vw);
+    line-height: 33px;
+}
+
 .write-title {
-    font-size: calc(30px + 1vw);
+    font-size: calc(15px + 3vw);
     font-weight: 1000;
     padding: 2% 0;
 }

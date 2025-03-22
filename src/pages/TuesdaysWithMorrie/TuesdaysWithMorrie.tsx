@@ -1,19 +1,19 @@
 import Footer from "../../components/Footer/Footer";
 import Navbar from "../../components/Navbar/Navbar";
 
-import styles from "./ThuesdaysWithMorrie.module.css";
+import styles from "./TuesdaysWithMorrie.module.css";
 
-const ThuesdaysWithMorrie: React.FC = () => {
+const TuesdaysWithMorrie: React.FC = () => {
   return (
     <>
       <Navbar />
       <div>
-        <div className={styles.title}>THUESDAYS WITH MORRIE</div>
+        <div className={styles.title}>TUESDAYS WITH MORRIE</div>
         <div className={styles.label}>a review by dawillu (March 2025) </div>
 
         <div className={styles.mainContainer}>
           <div className={styles.imgContainer}>
-            <img src="/assets/images/ThuesdaysWithMorrie/book.jpg" alt="" />
+            <img src="/assets/images/TuesdaysWithMorrie/book.jpg" alt="" />
           </div>
           <div className={styles.description}>
             <div className={styles.subheading}>1. A Book by Mitch Albom</div>
@@ -22,11 +22,15 @@ const ThuesdaysWithMorrie: React.FC = () => {
               This deeply inspirational memoir, "Tuesdays with Morrie", authored
               by Mitch Albom, captures his moving conversations with his former
               college instructor, Morrie Schwartz, who is presently suffering
-              from ALS. It embodies their meetings, where they touched upon
+              from ALS (short for Amyotrophic Lateral Sclerosis which is a
+              nervous system disease that affects nerve cells in the brain and
+              spinal cord). It embodies their meetings, where they touched upon
               profound issues of life, regret, love, forgiveness, and everything
               that comes with it.
             </div>
-            <div className={styles.paragraphTitle}>Lessons on Life</div>
+            <div className={styles.paragraphTitle}>
+              An Important Lessons on Life
+            </div>
             <div className={styles.text}>
               Even when faced with death, Morrie makes sure to tell you how to
               live life without looking back at it with regret. Instead, he
@@ -149,4 +153,4 @@ const ThuesdaysWithMorrie: React.FC = () => {
   );
 };
 
-export default ThuesdaysWithMorrie;
+export default TuesdaysWithMorrie;
