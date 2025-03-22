@@ -21,6 +21,7 @@ interface ContentSection {
 interface ProjectInfo {
   title: string;
   logoPath: string;
+  isVideoLogo?: boolean;
   year: string;
   languages: string;
   siteUrl: string;
@@ -112,6 +113,7 @@ const ProjectLayout: React.FC<ProjectLayoutProps> = ({ project }) => {
       <ProjectHeader
         title={project.title}
         logoUrl={project.logoPath}
+        isVideoLogo={project.isVideoLogo}
         year={project.year}
         languages={project.languages}
         siteUrl={project.siteUrl}

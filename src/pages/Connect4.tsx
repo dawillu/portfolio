@@ -11,7 +11,7 @@ const Connect4: React.FC = () => {
           year: "2022",
           languages: "HTML CSS JS / C#",
           siteUrl: "",
-          siteName: "site to be uploaded",
+          siteName: "Site CoomingSoon",
           contentSections: [
             {
               type: "description",
@@ -46,7 +46,7 @@ const Connect4: React.FC = () => {
           lightBackground: false,
         }}
       />
-      <ProjectNavigation nextPath="/TicTacToe" />
+      <ProjectNavigation nextPath="/tictactoe" />
     </>
   );
 };

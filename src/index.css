@@ -133,7 +133,7 @@ a {
   color: inherit;
 }
 
-img {
+video, img {
   -ms-user-select: none;
   -webkit-user-select: none;
   -khtml-user-select: none;

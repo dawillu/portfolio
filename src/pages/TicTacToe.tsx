@@ -11,7 +11,7 @@ const TicTacToe: React.FC = () => {
           year: "2020",
           languages: "HTML CSS JS",
           siteUrl: "https://tictactoe-dawillu.vercel.app",
-          siteName: "www.tictactoe.com",
+          siteName: "Explore Game",
           contentSections: [
             {
               type: "description",

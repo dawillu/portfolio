@@ -3,6 +3,7 @@ import { Link } from "react-scroll";
 interface ProjectHeaderProps {
   title: string;
   logoUrl: string;
+  isVideoLogo?: boolean;
   year: string;
   languages: string;
   siteUrl: string;
@@ -13,6 +14,7 @@ interface ProjectHeaderProps {
 const ProjectHeader: React.FC<ProjectHeaderProps> = ({
   title,
   logoUrl,
+  isVideoLogo,
   year,
   languages,
   siteUrl,
@@ -21,7 +23,14 @@ const ProjectHeader: React.FC<ProjectHeaderProps> = ({
 }) => {
   return (
     <header id="project-logo" className="project-logo" style={backgroundStyles}>
-      <img src={logoUrl} alt={`${title} logo`} loading="eager" />
+      {isVideoLogo ? (
+        <video id="video" autoPlay muted playsInline>
+          <source src={logoUrl} type="video/mp4" />
+        </video>
+      ) : (
+        <img src={logoUrl} alt={`${title} logo`} loading="eager" />
+      )}
+
       <div id="link-info">
         <div>
           <span>Year</span>

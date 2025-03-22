@@ -25,10 +25,10 @@ const Dabot: React.FC = () => {
         project={{
           title: "dabot",
           logoPath: "/assets/images/dabot/projectlogo.png",
-          year: "2020 - present",
+          year: "2020 - Present",
           languages: "JavaScript",
           siteUrl: "https://github.com/dawillu/dabot",
-          siteName: "explore the code",
+          siteName: "Explore the Code",
           contentSections: [
             {
               type: "description",
@@ -54,7 +54,7 @@ const Dabot: React.FC = () => {
             },
           ],
           backgroundColor: "#f8eddd",
-          backgroundImage: "",
+          backgroundImage: "/assets/images/dabot/background.jpg",
           lightBackground: true,
         }}
       />
@@ -63,7 +63,7 @@ const Dabot: React.FC = () => {
         <ProjectWideDescription
           title="A PERSONAL TOUCH"
           label="CAPTURING, STORING, REVIVING MOMENTS"
-          description='dabot was created years ago with one simple idea: to hold onto the moments that made "Teverna Ammuffita" special. A bot-only gallery, called the "Museum," was built to capture photos and videos, turning those fleeting memories into something permanent. With just a simple command, users could embed media, and an API would pick up on the dominant color of the image or video, giving each post a nostalgic, personal touch. What began as a fun way to relive moments quickly grew into a virtual museum, where the group could go back and keep those cherished memories alive, even as time moved on.'
+          description='dabot was created years ago with one simple idea: to hold onto the moments that made our discord channel "Teverna Ammuffita" special. A bot-only gallery, called the "Museum," was built to capture photos and videos, turning those fleeting memories into something permanent. With just a simple command, users could embed media, and an API would pick up on the dominant color of the image or video, giving each post a nostalgic, personal touch. What began as a fun way to relive moments quickly grew into a virtual museum, where the group could go back and keep those cherished memories alive, even as time moved on.'
         />
 
         <div className={styles.picturePile}>
@@ -108,7 +108,7 @@ const Dabot: React.FC = () => {
         </div>
       </div>
 
-      <ProjectNavigation nextPath="/Connect4" />
+      <ProjectNavigation nextPath="/connect4" />
     </>
   );
 };

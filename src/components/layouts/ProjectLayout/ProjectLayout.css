@@ -142,12 +142,18 @@
   min-width: 350px;
 }
 
+#video {
+  display: block;
+  width: 50%;
+  min-width: 400px;
+}
+
 #link-info {
   display: flex;
   justify-content: center;
   align-items: center;
   position: absolute;
-  bottom: 15vh;
+  bottom: 13vh;
   width: 100%;
 }
 

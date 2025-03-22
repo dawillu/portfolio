@@ -13,7 +13,7 @@ const projects: Project[] = [
   {
     id: "dawillu",
     name: "DAWILLU",
-    path: "",
+    path: "/dawillu",
     image: "/assets/images/dawillu.png",
   },
   {
