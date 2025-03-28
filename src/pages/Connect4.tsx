@@ -10,8 +10,8 @@ const Connect4: React.FC = () => {
           logoPath: "/assets/images/connect4/projectlogo.png",
           year: "2022",
           languages: "HTML CSS JS / C#",
-          siteUrl: "",
-          siteName: "Site CoomingSoon",
+          siteUrl: "https://github.com/dawillu/Connect4",
+          siteName: "Explore Code",
           contentSections: [
             {
               type: "description",
