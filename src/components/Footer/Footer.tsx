@@ -2,10 +2,16 @@ import React from "react";
 import "./Footer.css";
 
 const Footer: React.FC = () => {
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
   return (
     <footer className="container footer font-primary">
-      <div id="title">
-        <img id="footer-logo" src="/assets/logo.png" alt="Footer Logo" />
+      <div id="title" onClick={scrollToTop} style={{ cursor: "pointer" }}>
+        <img id="footer-logo" src="/assets/logo.png" alt="Back to top" />
       </div>
       <div id="socials" className="container">
         <a

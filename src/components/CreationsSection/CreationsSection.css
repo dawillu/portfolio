@@ -8,13 +8,24 @@
     line-height: 33px;
 }
 
-.write-title {
+.creations-container {
     font-size: calc(15px + 3vw);
     font-weight: 1000;
     padding: 2% 0;
 }
 
-.write-title span {
+.creations-title {
+    font-size: calc(15px + 3vw);
+    font-weight: 1000;
+    padding: 2% 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.creations-title span {
     font-size: calc(10px + 1vw);
     font-weight: 500;
+}
+
+.creations-title:hover {
+    opacity: 0.7;
 }

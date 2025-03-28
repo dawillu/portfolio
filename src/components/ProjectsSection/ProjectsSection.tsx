@@ -14,25 +14,31 @@ const projects: Project[] = [
     id: "dawillu",
     name: "DAWILLU",
     path: "/dawillu",
-    image: "/assets/images/dawillu.png",
+    image: "/assets/images/dynamicImages/dawillu.png",
+  },
+  {
+    id: "galaxytrucker",
+    name: "GALAXY TRUCKER",
+    path: "/GalaxyTrucker",
+    image: "/assets/images/dynamicImages/galaxytrucker.png",
   },
   {
     id: "dabot",
     name: "DABOT",
     path: "/dabot",
-    image: "/assets/images/dabot.png",
+    image: "/assets/images/dynamicImages/dabot.png",
   },
   {
     id: "connect4",
     name: "CONNECT4",
     path: "/Connect4",
-    image: "/assets/images/connect4.png",
+    image: "/assets/images/dynamicImages/connect4.png",
   },
   {
     id: "tictactoe",
     name: "TICTACTOE",
     path: "/TicTacToe",
-    image: "/assets/images/tictactoe.png",
+    image: "/assets/images/dynamicImages/tictactoe.png",
   },
 ];
 
@@ -95,10 +101,6 @@ const ProjectsSection: React.FC = () => {
                   className="projectName"
                   style={{
                     opacity: currentIndex === index ? 0.6 : 1,
-                    transform:
-                      currentIndex === index
-                        ? "translateX(15px)"
-                        : "translateX(0)",
                     transition: "all 0.3s ease-in-out",
                   }}
                 >
