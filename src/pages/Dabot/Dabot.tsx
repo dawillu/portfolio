@@ -73,7 +73,7 @@ const Dabot: React.FC = () => {
               className={`${styles.pileImage} ${
                 activeImage === index ? styles.active : ""
               }`}
-              data-animation="fade-in"
+              data-animation="grow"
               onClick={() => handleImageClick(index)}
               style={{
                 backgroundImage: `url('/assets/images/dabot/pile/${

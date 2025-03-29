@@ -10,12 +10,8 @@ const CreationsSection: React.FC = () => {
             Tuesdays With Morrie <span> review of a book by Mitch Albom </span>
           </Link>
           <br />
-          <Link className="creations-title" to="">
+          <Link className="creations-title" to="https://youtu.be/9PH-Dn7_9tY?feature=shared">
             Agosto <span> august month vlog recap </span>
-          </Link>
-          <br />
-          <Link className="creations-title" to="">
-            New Content <span> cooming soon </span>
           </Link>
       </div>
     </div>

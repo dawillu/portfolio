@@ -331,6 +331,19 @@
   }
 }
 
+.grow {
+  animation: grow 0.8s;
+}
+
+@keyframes grow {
+  0% {
+    scale: 0.5;
+  }
+  100% {
+    scale: 1;
+  }
+}
+
 .subheading-title {
   font-weight: 400;
   padding-top: 4vh;

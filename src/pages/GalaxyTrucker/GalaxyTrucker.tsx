@@ -12,7 +12,7 @@ const GalaxyTrucker: React.FC = () => {
           year: "2025 - Present",
           languages: "JAVA",
           siteUrl: "",
-          siteName: "Explore Code",
+          siteName: "Explore the Code",
           contentSections: [
             {
               type: "description",
