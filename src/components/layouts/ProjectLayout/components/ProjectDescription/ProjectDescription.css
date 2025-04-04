@@ -1,0 +1,44 @@
+#description-container {
+  justify-content: center;
+  align-items: center;
+  padding-top: calc(env(safe-area-inset-top) + 80px);
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+#description-container.no-header-padding {
+  padding-top: 0;
+}
+
+.head-title {
+  font-weight: 400;
+  font-size: calc(15px + 2.2vw);
+  max-width: 70%;
+}
+
+.description-div > div {
+  width: 40%;
+  margin-left: 0;
+  margin-top: 0;
+}
+
+.subheading-title {
+  font-weight: 400;
+  padding-top: 4vh;
+  font-size: calc(10px + 1vw);
+}
+
+.subheading-title-label {
+  font-weight: 900;
+  font-size: calc(15px + 1.5vw);
+}
+
+.description {
+  font-size: calc(10px + 0.7vw);
+}
+
+@media (max-width: 750px) {
+  .description-div > div {
+    width: 90%;
+  }
+}

@@ -1,0 +1,15 @@
+#nav-logo {
+  height: 30px;
+  margin-right: 10px;
+  transition: color 0.3s ease;
+}
+
+#nav-logo.light {
+  filter: brightness(0) saturate(100%) invert(0%) sepia(98%) saturate(7%)
+    hue-rotate(229deg) brightness(94%) contrast(100%);
+}
+
+#nav-logo.dark {
+  filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7456%)
+    hue-rotate(210deg) brightness(112%) contrast(95%);
+}

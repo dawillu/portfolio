@@ -1,7 +1,7 @@
 import { useState } from "react";
-import ProjectNavigation from "../../components/layouts/ProjectLayout/components/ProjectNavigation";
+import ProjectNavigation from "../../components/layouts/ProjectLayout/components/ProjectNavigation/ProjectNavigation";
 import ProjectLayout from "../../components/layouts/ProjectLayout/ProjectLayout";
-import ProjectWideDescription from "../../components/layouts/ProjectLayout/components/ProjectWideDescription";
+import ProjectWideDescription from "../../components/layouts/ProjectLayout/components/ProjectDescription/ProjectWideDescription";
 import styles from "./Dabot.module.css";
 
 const Dabot: React.FC = () => {

@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 
+import './ProjectNavigation.css'
+
 interface ProjectNavigationProps {
   nextPath: string;
 }

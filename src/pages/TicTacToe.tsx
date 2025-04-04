@@ -1,4 +1,4 @@
-import ProjectNavigation from "../components/layouts/ProjectLayout/components/ProjectNavigation";
+import ProjectNavigation from "../components/layouts/ProjectLayout/components/ProjectNavigation/ProjectNavigation";
 import ProjectLayout from "../components/layouts/ProjectLayout/ProjectLayout";
 
 const TicTacToe: React.FC = () => {

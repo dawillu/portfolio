@@ -1,5 +1,6 @@
 import { useEffect, useRef } from "react";
 import { Link } from "react-scroll";
+import "./ProjectHeader.css";
 
 interface ProjectHeaderProps {
   title: string;
@@ -53,7 +54,6 @@ const ProjectHeader: React.FC<ProjectHeaderProps> = ({
     video.addEventListener("ended", handleEnded);
     document.addEventListener("visibilitychange", handleVisibilityChange);
     
-    // Force video to play from start on mobile
     if (isMobileRef.current) {
       video.currentTime = 0;
       video.play().catch(() => {});
@@ -110,7 +110,7 @@ const ProjectHeader: React.FC<ProjectHeaderProps> = ({
       <Link
         to="description-container"
         smooth={true}
-        duration={1000}
+        duration={700}
         className="arrow"
         id="arrow"
         aria-hidden="true"

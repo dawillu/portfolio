@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
 import Navbar from "../../Navbar/Navbar";
 import "./ProjectLayout.css";
-import ProjectHeader from "./components/ProjectHeader";
-import ProjectDescription from "./components/ProjectDescription";
-import ProjectGallery from "./components/ProjectGallery";
+import ProjectHeader from "./components/ProjectHeader/ProjectHeader";
+import ProjectDescription from "./components/ProjectDescription/ProjectDescription";
+import ProjectGallery from "./components/ProjectGallery/ProjectGallery";
 
 interface Section {
   title: string;

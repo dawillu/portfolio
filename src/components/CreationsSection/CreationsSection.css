@@ -1,31 +1,40 @@
 #creations {
-    padding: calc(70px + env(safe-area-inset-top)) 5% 0 5%;
+  padding: calc(70px + env(safe-area-inset-top)) 5% 0 5%;
 }
 
 .creations {
-    font-weight: 1000;
-    font-size: calc(30px + 2vw);
-    line-height: 33px;
+  padding-top: calc(70px + env(safe-area-inset-top));
+  font-size: calc(30px + 2vw);
+  line-height: 0.9;
+  font-weight: 1000;
+  width: fit-content;
+  background: linear-gradient(90deg, #e66465, #9198e5);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  letter-spacing: 1px;
 }
 
 .creations-container {
-    font-size: calc(15px + 3vw);
-    font-weight: 1000;
-    margin: 2% 0;
+  font-size: calc(15px + 3vw);
+  font-weight: 1000;
+  margin: 1% 0;
 }
 
 .creations-title {
-    font-size: calc(15px + 3vw);
-    font-weight: 1000;
-    margin: 2% 0;
-    transition: all 0.3s ease-in-out;
+  font-size: calc(15px + 3vw);
+  font-weight: 1000;
+  margin: 2% 0;
+  transition: all 0.3s ease-in-out;
+  color: antiquewhite;
 }
 
 .creations-title span {
-    font-size: calc(10px + 1vw);
-    font-weight: 500;
+  font-size: calc(10px + 1vw);
+  font-weight: 500;
+  color: rgb(161, 154, 154);
 }
 
 .creations-title:hover {
-    opacity: 0.7;
+  opacity: 0.7;
 }

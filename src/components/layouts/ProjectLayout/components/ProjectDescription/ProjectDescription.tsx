@@ -1,3 +1,5 @@
+import './ProjectDescription.css'
+
 interface Section {
   title: string;
   label: string;

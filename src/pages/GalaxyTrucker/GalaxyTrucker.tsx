@@ -1,5 +1,5 @@
-import ProjectNavigation from "../..//components/layouts/ProjectLayout/components/ProjectNavigation";
-import ProjectWideDescription from "../../components/layouts/ProjectLayout/components/ProjectWideDescription";
+import ProjectNavigation from "../../components/layouts/ProjectLayout/components/ProjectNavigation/ProjectNavigation";
+import ProjectWideDescription from "../../components/layouts/ProjectLayout/components/ProjectDescription/ProjectWideDescription";
 import ProjectLayout from "../../components/layouts/ProjectLayout/ProjectLayout";
 
 const GalaxyTrucker: React.FC = () => {

@@ -1,0 +1,20 @@
+.next-project {
+  margin-top: 10vh;
+  padding-bottom: 40px;
+  width: 100%;
+  text-align: center;
+}
+
+.next-project-label {
+  font-family: sohne;
+  padding: 20px;
+}
+
+.next-project-arrow {
+  margin: auto;
+  font-size: 50px;
+  width: fit-content;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-top: 20px solid white;
+}

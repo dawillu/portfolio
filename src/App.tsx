@@ -1,4 +1,3 @@
-import { useState, useEffect } from "react";
 import Loader from "./components/ui/Loader/Loader";
 import Navbar from "./components/Navbar/Navbar";
 import Welcome from "./components/WelcomeSection/Welcome";
@@ -10,7 +9,6 @@ import {
   BrowserRouter as Router,
   Routes,
   Route,
-  useLocation,
 } from "react-router-dom";
 import Dawillu from "./pages/Dawillu/Dawillu";
 import GalaxyTrucker from "./pages/GalaxyTrucker/GalaxyTrucker";
@@ -20,44 +18,13 @@ import TicTacToe from "./pages/TicTacToe";
 import ScrollToTop from "./components/utils/ScrollToTop";
 import TuesdaysWithMorrie from "./pages/TuesdaysWithMorrie/TuesdaysWithMorrie";
 
-function RouteChangeListener({
-  setIsLoading,
-}: {
-  setIsLoading: React.Dispatch<React.SetStateAction<boolean>>;
-}) {
-  const location = useLocation();
-
-  useEffect(() => {
-    setIsLoading(true);
-
-    const timer = setTimeout(() => {
-      setIsLoading(false);
-    }, 2000);
-
-    return () => clearTimeout(timer);
-  }, [location.pathname]);
-
-  return null;
-}
-
 function AppContent() {
-  const [isLoading, setIsLoading] = useState(false);
-
   return (
     <>
       <ScrollToTop />
-      <RouteChangeListener setIsLoading={setIsLoading} />
+      <Loader />
 
-      {isLoading && <Loader />}
-
-      <div
-        id="content"
-        style={{
-          opacity: isLoading ? 0 : 1,
-          visibility: isLoading ? "hidden" : "visible",
-          transition: "opacity 0.3s ease-in-out",
-        }}
-      >
+      <div id="content">
         <Routes>
           <Route
             path="/"

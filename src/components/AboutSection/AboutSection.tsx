@@ -15,9 +15,6 @@ const AboutSection: React.FC = () => {
     {
       src: "/assets/images/aboutGrid/photo.jpg",
     },
-  ];
-
-  const hiddenImages = [
     {
       src: "/assets/images/aboutGrid/photo1.jpg",
     },
@@ -62,17 +59,6 @@ const AboutSection: React.FC = () => {
         <div className="profile-pic-container pic-padding-top">
           <div className="photo-grid">
             {images.map((image, index) => (
-              <div key={index} className="photo">
-                <div className="photo-wrapper">
-                  <img src={image.src} loading="lazy" />
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-        <div className="profile-pic-container hidden-grid">
-          <div className="photo-grid">
-            {hiddenImages.map((image, index) => (
               <div key={index} className="photo">
                 <div className="photo-wrapper">
                   <img src={image.src} loading="lazy" />
