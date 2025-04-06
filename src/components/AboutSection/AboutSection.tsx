@@ -21,6 +21,15 @@ const AboutSection: React.FC = () => {
     {
       src: "/assets/images/aboutGrid/coffe.jpg",
     },
+    {
+      src: "/assets/images/aboutGrid/work.jpg",
+    },
+    {
+      src: "/assets/images/aboutGrid/phone.jpg",
+    },
+    {
+      src: "/assets/images/aboutGrid/math.jpg",
+    },
   ];
 
   return (

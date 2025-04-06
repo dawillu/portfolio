@@ -43,7 +43,7 @@ const Dawillu: React.FC = () => {
           lightBackground: false,
         }}
       />
-      <ProjectNavigation nextPath="/dabot" />
+      <ProjectNavigation nextPath="/galaxytrucker" />
     </>
   );
 };
