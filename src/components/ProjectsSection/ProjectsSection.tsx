@@ -89,8 +89,6 @@ const ProjectsSection: React.FC = () => {
     setIsRotating(true);
   };
 
-  const [hoveredProject, setHoveredProject] = useState<string | null>(null);
-
   return (
     <div id="projects">
       <div id="project-work">creating since 2020</div>
@@ -120,8 +118,6 @@ const ProjectsSection: React.FC = () => {
                 className="projectName"
                 data-hover-text={project.hoverText}
                 data-hover-text-top={project.hoverTextTop}
-                onMouseEnter={() => setHoveredProject(project.name)}
-                onMouseLeave={() => setHoveredProject(null)}
               >
                 {project.name}
               </Link>
