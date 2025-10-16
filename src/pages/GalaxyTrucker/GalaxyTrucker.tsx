@@ -9,7 +9,7 @@ const GalaxyTrucker: React.FC = () => {
         project={{
           title: "galaxy trucker",
           logoPath: "/assets/images/galaxyTrucker/projectlogo.png",
-          year: "2025 - Present",
+          year: "2025",
           languages: "JAVA",
           siteUrl: "",
           siteName: "Explore the Code",
@@ -31,7 +31,7 @@ const GalaxyTrucker: React.FC = () => {
       <div id="deep-description-container">
         <ProjectWideDescription
           title="GALAXY TRUCKER replication TEAM"
-          label="COOMING SOON..."
+          label="Academic Project"
           description=''
         />
       </div>

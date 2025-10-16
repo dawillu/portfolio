@@ -1,12 +1,9 @@
 import React from "react";
-import { Link } from "react-scroll";
-import { useLocation } from "react-router-dom";
+import { Link as ScrollLink } from "react-scroll";
+import { Link as RouterLink } from "react-router-dom";
 import "./Navbar.css";
 
 const Navbar: React.FC = () => {
-  const location = useLocation();
-  const isHomePage = location.pathname === "/";
-
   return (
     <>
       <div className="notch-cover">
@@ -19,44 +16,40 @@ const Navbar: React.FC = () => {
             </a>
           </div>
 
-          {isHomePage && (
             <div id="right-nav" className="container">
               <div>
                 <ul className="menu font-primary">
                   <li>
-                    <Link
+                    <ScrollLink
                       to="projects"
                       smooth={true}
                       duration={700}
                       className="menulink"
                     >
                       projects,
-                    </Link>
+                    </ScrollLink>
                   </li>
                   <li>
-                    <Link
-                      to="about"
-                      smooth={true}
-                      duration={700}
+                    <RouterLink
+                      to="/about"
                       className="menulink"
                     >
                       about,
-                    </Link>
+                    </RouterLink>
                   </li>
                   <li>
-                    <Link
+                    <ScrollLink
                       to="creations"
                       smooth={true}
                       duration={700}
                       className="menulink"
                     >
                       creations
-                    </Link>
+                    </ScrollLink>
                   </li>
                 </ul>
               </div>
             </div>
-          )}
         </nav>
       </div>
     </>

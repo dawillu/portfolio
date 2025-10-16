@@ -5,40 +5,58 @@ import { Link } from "react-router-dom";
 interface Project {
   id: string;
   name: string;
+  hoverText?: string;
+  hoverTextTop?: string;
   path: string;
   image: string;
+  link: string;
 }
 
 const projects: Project[] = [
   {
     id: "dawillu",
     name: "DAWILLU",
+    hoverText: "portfolio",
+    hoverTextTop: "React - TypeScript - CSS",
     path: "/dawillu",
     image: "/assets/images/dynamicImages/dawillu.png",
+    link: "/dawillu",
   },
   {
     id: "galaxytrucker",
     name: "GALAXY TRUCKER",
+    hoverText: "adventure game",
+    hoverTextTop: "Java / JavaFX / OOP",
     path: "/GalaxyTrucker",
     image: "/assets/images/dynamicImages/galaxytrucker.png",
+    link: "/GalaxyTrucker",
   },
   {
     id: "dabot",
     name: "DABOT",
+    hoverText: "discord chatbot",
+    hoverTextTop: "JavaScript / Node.js / Discord.js",
     path: "/dabot",
     image: "/assets/images/dynamicImages/dabot.png",
+    link: "/dabot",
   },
   {
     id: "connect4",
     name: "CONNECT4",
+    hoverText: "classic connect four game",
+    hoverTextTop: "C# / HTML / JS / CSS",
     path: "/Connect4",
     image: "/assets/images/dynamicImages/connect4.png",
+    link: "/Connect4",
   },
   {
     id: "tictactoe",
     name: "TICTACTOE",
+    hoverText: "simple tic tac toe game",
+    hoverTextTop: "HTML / JS / CSS",
     path: "/TicTacToe",
     image: "/assets/images/dynamicImages/tictactoe.png",
+    link: "/TicTacToe",
   },
 ];
 
@@ -71,9 +89,11 @@ const ProjectsSection: React.FC = () => {
     setIsRotating(true);
   };
 
+  const [hoveredProject, setHoveredProject] = useState<string | null>(null);
+
   return (
     <div id="projects">
-      <div id="project-work">WORKS</div>
+      <div id="project-work">creating since 2020</div>
       <div className="projects-container container">
         <div id="dynamic-change">
           <img
@@ -95,17 +115,15 @@ const ProjectsSection: React.FC = () => {
               onMouseEnter={() => handleProjectHover(index)}
               onMouseLeave={handleProjectLeave}
             >
-              <Link to={project.path}>
-                <div
-                  id={project.id}
-                  className="projectName"
-                  style={{
-                    opacity: currentIndex === index ? 0.6 : 1,
-                    transition: "all 0.3s ease-in-out",
-                  }}
-                >
-                  {project.name}
-                </div>
+              <Link
+                to={project.link}
+                className="projectName"
+                data-hover-text={project.hoverText}
+                data-hover-text-top={project.hoverTextTop}
+                onMouseEnter={() => setHoveredProject(project.name)}
+                onMouseLeave={() => setHoveredProject(null)}
+              >
+                {project.name}
               </Link>
             </div>
           ))}

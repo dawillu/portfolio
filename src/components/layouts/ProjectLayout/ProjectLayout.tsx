@@ -74,9 +74,14 @@ const ProjectLayout: React.FC<ProjectLayoutProps> = ({ project }) => {
     const textElement = document.getElementById("nav-logo");
     const projectInfo = document.getElementById("link-info");
     const arrow = document.getElementById("arrow");
+    const navLinks = document.querySelectorAll<HTMLElement>(".menulink");
+
     if (textElement) textElement.classList.add("light");
     if (projectInfo) projectInfo.style.color = "#1a191a";
     if (arrow) arrow.style.borderTopColor = "black";
+    navLinks.forEach((link) => {
+      link.style.color = "#1a191a";
+    });
 
     const handleScroll = () => {
       const scrollPosition =
@@ -86,9 +91,15 @@ const ProjectLayout: React.FC<ProjectLayoutProps> = ({ project }) => {
         if (scrollPosition > window.innerHeight * 0.97) {
           textElement.classList.add("dark");
           textElement.classList.remove("light");
+          navLinks.forEach((link) => {
+            link.style.color = "#ffffff";
+          });
         } else {
           textElement.classList.remove("dark");
           textElement.classList.add("light");
+          navLinks.forEach((link) => {
+            link.style.color = "#1a191a";
+          });
         }
       }
     };
