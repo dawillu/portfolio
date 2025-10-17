@@ -17,6 +17,8 @@ import TicTacToe from "./pages/TicTacToe";
 import ScrollToTop from "./components/utils/ScrollToTop";
 import TuesdaysWithMorrie from "./pages/TuesdaysWithMorrie/TuesdaysWithMorrie";
 import About from "./pages/About/About";
+import PrivacyPolicy from "./pages/PrivacyPolicy/PrivacyPolicy"
+import LegalNotice from "./pages/LegalNotice/LegalNotice"
 
 function AppContent() {
   return (
@@ -47,6 +49,8 @@ function AppContent() {
           <Route path="/tictactoe" element={<TicTacToe />} />
           <Route path="/tuesdayswithmorrie" element={<TuesdaysWithMorrie />} />
           <Route path="/about" element={<About />} />
+          <Route path="/privacypolicy" element={<PrivacyPolicy />} />
+          <Route path="/legalnotice" element={<LegalNotice />} />
         </Routes>
       </div>
     </>

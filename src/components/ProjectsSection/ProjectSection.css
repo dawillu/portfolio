@@ -4,14 +4,22 @@
 }
 
 #project-work {
-  font-size: calc(20px + 1vw);
   padding: calc(70px + env(safe-area-inset-top)) 5% 0 5%;
-  color: antiquewhite;
+  padding-top: calc(70px + env(safe-area-inset-top));
+  font-size: calc(20px + 2vw);
+  font-weight: 1000;
+  width: fit-content;
+  background: linear-gradient(90deg, #e66465, #9198e5);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  letter-spacing: 1px;
 }
 
 .projects-container {
   margin: 2% 5%;
   height: calc(fit-content + 50px);
+  justify-content: left;
 }
 
 .project {
@@ -19,21 +27,22 @@
   display: flex;
   align-items: center;
   font-size: 400%;
-  font-weight: 1000;
+  font-weight: 800;
   width: 100%;
   line-height: 0.8;
 }
 
 #dynamic-change {
-  width: 50%;
+  width: 40%;
   margin-left: 0;
-  margin-top: 2%;
+  margin-top: 1%;
   position: sticky;
   top: calc(50px + 15vh + env(safe-area-inset-top));
+  margin-right: 3%;
 }
 
 #projects-title-container {
-  width: 40%;
+  width: 50%;
   margin-left: 0;
   margin-top: 0;
 }
@@ -45,29 +54,30 @@
 }
 
 .projectName {
-  font-size: calc(30px + 3vw);
+  font-size: calc(20px + 2vw);
   display: flex;
   align-items: center;
-  padding: 5% 0;
+  padding: 2% 0;
   position: relative;
   overflow: visible;
+  color: antiquewhite;
 }
 
 .projectName::after {
   content: attr(data-hover-text);
   position: absolute;
   bottom: 0;
-  transform: translateY(-100%);
-  font-size: calc(10px + 1vw);
-  font-weight: 300;
-  color: antiquewhite;
+  transform: translateY(-50%);
+  font-size: calc(4px + 1vw);
+  font-weight: 400;
+  color: rgb(255, 255, 255);
   transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.4s ease;
   white-space: nowrap;
   opacity: 0;
 }
 
 .projectName:hover::after {
-  transform: translateY(0.4vh);
+  transform: translateY(0.6vh);
   opacity: 0.8;
 }
 
@@ -75,10 +85,10 @@
   content: attr(data-hover-text-top);
   position: absolute;
   top: 0;
-  transform: translateY(100%);
-  font-size: calc(10px + 1vw);
-  font-weight: 300;
-  color: antiquewhite;
+  transform: translateY(50%);
+  font-size: calc(4px + 1vw);
+  font-weight: 400;
+  color: rgb(255, 255, 255);
   transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.4s ease;
   white-space: nowrap;
   opacity: 0;
@@ -98,13 +108,12 @@
     top: 0;
   }
   #projects-title-container {
-    padding-top: 20px;
+    padding-top: 10px;
     width: 100%;
   }
   .projectName {
     height: 5%;
-    min-height: 50px;
-    padding: 0;
+    padding: 1% 0;
   }
 
   .projectName::after,

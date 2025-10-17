@@ -1,6 +1,8 @@
 .footer {
   height: fit-content;
-  padding: 15% 5% 10px 5%;
+  padding: 10% 0 10px 0;
+  margin: 5% 5% 0 5%;
+  border-top: 1px solid #444;
 }
 
 #socials {
@@ -41,6 +43,33 @@
     brightness(102%) contrast(104%);
 }
 
+#made-with {
+  margin-left: 0;
+  margin-bottom: 30px;
+  margin-right: 0;
+}
+
+
+#footer-privacy-legal {
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+}
+
+#privacy-policy, #legal-notice {
+  width: 100%;
+  margin-left: 40px;
+  margin-right: 0;
+}
+
+#privacy-policy {
+  margin-bottom: 30px;
+}
+
+#legal-notice {
+  margin-bottom: 4px;
+}
+
 #title {
   transition: 1s ease;
   margin-bottom: 0;
@@ -61,5 +90,18 @@
     transition: 0s;
     width: 0;
     visibility: hidden;
+  }
+
+  #made-with {
+    width: 0;
+    visibility: hidden;
+  }
+
+  #legal-notice{
+    margin-left: 5px;
+  } 
+  
+  #privacy-policy {
+    margin-left: 5px;
   }
 }

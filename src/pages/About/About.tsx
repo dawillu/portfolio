@@ -55,9 +55,32 @@ const About: React.FC = () => {
       <Navbar />
       <header id="about-logo" className="about-logo">
         <img src={"/assets/images/about/logo.png"} loading="eager" />
+        <div className="about-scrolldown">
+          Scroll Down
+        </div>
+        <div className="about-description1">
+          "I aim for perfection"
+        </div>
+        <div className="about-description2">
+          "but I know a little mess can spark creativity"
+        </div> 
+
+        <div className="top-left-text">
+          Top-Left
+        </div>
+        <div className="top-right-text">
+          Top-Right
+        </div>
+        <div className="bottom-left-text">
+          Bottom-Left
+        </div>
         <div className={`flying-disk ${isPlaying ? "spinning" : ""}`} onClick={handleDiskClick}>
           <img src="/assets/images/about/disk.png" alt="Music disk" />
         </div>
+        <div className="song-name-credit">
+          🎵
+        </div>
+
         <audio ref={audioRef} src="/assets/audio/song.mp3" />
       </header>
 

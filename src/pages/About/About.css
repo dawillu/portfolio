@@ -20,11 +20,94 @@
   position: absolute;
   bottom: 10px;
   right: 15px;
-  width: 100px;
+  width: 80px;
   margin-bottom: 10px;
   cursor: pointer;
   opacity: 0.9;
   transition: transform 0.3s ease;
+}
+
+.song-name-credit {
+  color: rgb(220, 215, 216);
+  position: absolute;
+  bottom: 30px;
+  right: 100px;
+  font-weight: 300;
+  padding: 10px;
+  backdrop-filter: blur(10px);
+  border: solid 0.4px #555;
+  border-radius: 20px
+}
+
+.about-description1 {
+  color: rgb(220, 215, 216);
+  position: absolute;
+  font-weight: 300;
+  padding: 10px;
+  margin: 10%;
+  margin-bottom: 200px;
+  backdrop-filter: blur(4px);
+  border: solid 0.4px #555;
+  border-radius: 20px;
+}
+
+.about-description2 {
+  color: rgb(220, 215, 216);
+  position: absolute;
+  font-weight: 300;
+  padding: 10px;
+  margin: 10%;
+  margin-bottom: 100px;
+  backdrop-filter: blur(4px);
+  border: solid 0.4px #555;
+  border-radius: 20px;
+}
+
+.about-scrolldown {
+  color: rgb(220, 215, 216);
+  position: absolute;
+  font-weight: 300;
+  padding: 10px;
+  backdrop-filter: blur(10px);
+  border: solid 0.4px #555;
+  border-radius: 20px;
+  bottom: 30px;
+}
+
+.bottom-left-text {
+  position: absolute;
+  bottom: 30px;
+  left: 15px;
+  color: rgb(220, 215, 216);
+  font-weight: 300;
+  padding: 10px;
+  backdrop-filter: blur(10px);
+  border: solid 0.4px #555;
+  border-radius: 20px;
+}
+
+.top-left-text {
+  position: absolute;
+  top: calc(env(safe-area-inset-top) + 70px);
+  left: 15px;
+  color: rgb(220, 215, 216);
+  font-weight: 300;
+  padding: 10px;
+  backdrop-filter: blur(10px);
+  border: solid 0.4px #555;
+  border-radius: 20px;
+}
+
+.top-right-text {
+  position: absolute;
+  top: calc(env(safe-area-inset-top) + 70px);
+  right: 15px;
+  color: rgb(220, 215, 216);
+  font-weight: 300;
+  padding: 10px;
+  backdrop-filter: blur(10px);
+  border: solid 0.4px #555;
+  border-radius: 20px;
 }
 
 .flying-disk img {

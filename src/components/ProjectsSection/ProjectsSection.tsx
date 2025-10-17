@@ -42,7 +42,7 @@ const projects: Project[] = [
   },
   {
     id: "connect4",
-    name: "CONNECT4",
+    name: "Connect4",
     hoverText: "classic connect four game",
     hoverTextTop: "C# / HTML / JS / CSS",
     path: "/Connect4",
@@ -51,7 +51,7 @@ const projects: Project[] = [
   },
   {
     id: "tictactoe",
-    name: "TICTACTOE",
+    name: "TicTacToe",
     hoverText: "simple tic tac toe game",
     hoverTextTop: "HTML / JS / CSS",
     path: "/TicTacToe",
@@ -91,7 +91,7 @@ const ProjectsSection: React.FC = () => {
 
   return (
     <div id="projects">
-      <div id="project-work">creating since 2020</div>
+      <div id="project-work">PERSONAL PROJECTS</div>
       <div className="projects-container container">
         <div id="dynamic-change">
           <img

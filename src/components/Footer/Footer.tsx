@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Footer.css";
 
 const Footer: React.FC = () => {
@@ -10,9 +11,20 @@ const Footer: React.FC = () => {
   };
   return (
     <footer className="container footer font-primary">
-      <div id="title" onClick={scrollToTop} style={{ cursor: "pointer" }}>
-        <img id="footer-logo" src="/assets/logo.png" alt="Back to top" />
+      <div id="made-with">
+        Made with 🫀
       </div>
+      <div id="footer-privacy-legal">
+        <div id="legal-notice">
+          <Link to="/legalnotice">Legal Notice</Link>
+        </div>
+        <div id="privacy-policy">
+          <Link to="/privacypolicy">Privacy Policy</Link>
+        </div>
+      </div>
+      {/* <div id="title" onClick={scrollToTop} style={{ cursor: "pointer" }}>
+        <img id="footer-logo" src="/assets/logo.png" alt="Back to top" />
+      </div> */}
       <div id="socials" className="container">
         <a
           href="https://github.com/dawillu"

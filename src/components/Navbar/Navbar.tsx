@@ -30,12 +30,12 @@ const Navbar: React.FC = () => {
                     </ScrollLink>
                   </li>
                   <li>
-                    <RouterLink
-                      to="/about"
+                    <a
+                      href="/about"
                       className="menulink"
                     >
                       about,
-                    </RouterLink>
+                    </a>
                   </li>
                   <li>
                     <ScrollLink
