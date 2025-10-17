@@ -85,7 +85,7 @@ const ProjectLayout: React.FC<ProjectLayoutProps> = ({ project }) => {
 
     const handleScroll = () => {
       const scrollPosition =
-        window.scrollY || document.documentElement.scrollTop;
+        window.scrollY;
 
       if (textElement) {
         if (scrollPosition > window.innerHeight * 0.97) {

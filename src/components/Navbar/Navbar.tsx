@@ -1,6 +1,5 @@
 import React from "react";
 import { Link as ScrollLink } from "react-scroll";
-import { Link as RouterLink } from "react-router-dom";
 import "./Navbar.css";
 
 const Navbar: React.FC = () => {
