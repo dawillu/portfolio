@@ -14,6 +14,7 @@ import GalaxyTrucker from "./pages/GalaxyTrucker/GalaxyTrucker";
 import Dabot from "./pages/Dabot/Dabot";
 import Connect4 from "./pages/Connect4";
 import TicTacToe from "./pages/TicTacToe";
+import ScrollToTop from "./components/utils/ScrollToTop";
 import TuesdaysWithMorrie from "./pages/TuesdaysWithMorrie/TuesdaysWithMorrie";
 import About from "./pages/About/About";
 import PrivacyPolicy from "./pages/PrivacyPolicy/PrivacyPolicy"
@@ -22,6 +23,7 @@ import LegalNotice from "./pages/LegalNotice/LegalNotice"
 function AppContent() {
   return (
     <>
+      <ScrollToTop />
       <Loader />
 
       <div id="content">
