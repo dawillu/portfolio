@@ -108,7 +108,7 @@ const Dabot: React.FC = () => {
         </div>
       </div>
 
-      <ProjectNavigation nextPath="/connect4" />
+      <ProjectNavigation nextPath="/Connect4" />
     </>
   );
 };

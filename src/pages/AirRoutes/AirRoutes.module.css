@@ -1,0 +1,58 @@
+.scatteredContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+  gap: 20px;
+  margin: 30px auto;
+  max-width: 1200px;
+  padding: 0 5% 0 0;
+}
+
+.scatteredElement { 
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 25px;
+  padding: 15px 30px;
+  font-size: calc(8px + 0.5vw);
+  transition: all 0.3s ease;
+  cursor: default;
+}
+
+.scatteredElement:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  .picturePile {
+    height: 400px;
+  }
+
+  .pileImage {
+    width: 200px;
+    height: 300px;
+  }
+
+  .pileImage:nth-child(1) {
+    transform: rotate(-8deg) translateX(-80px);
+  }
+
+  .pileImage:nth-child(2) {
+    transform: rotate(-4deg) translateX(-40px);
+  }
+
+  .pileImage:nth-child(4) {
+    transform: rotate(4deg) translateX(40px);
+  }
+
+  .pileImage:nth-child(5) {
+    transform: rotate(8deg) translateX(80px);
+  }
+
+  .scatteredElement {
+    font-size: 14px;
+    padding: 12px 20px;
+  }
+}

@@ -10,6 +10,7 @@ import {
   Route,
 } from "react-router-dom";
 import Dawillu from "./pages/Dawillu/Dawillu";
+import AirRoutes from "./pages/AirRoutes/AirRoutes";
 import GalaxyTrucker from "./pages/GalaxyTrucker/GalaxyTrucker";
 import Dabot from "./pages/Dabot/Dabot";
 import Connect4 from "./pages/Connect4";
@@ -43,6 +44,7 @@ function AppContent() {
             }
           />
           <Route path="/dawillu" element={<Dawillu />} />
+          <Route path="/airroutes" element={<AirRoutes />} />
           <Route path="/galaxytrucker" element={<GalaxyTrucker />} />
           <Route path="/dabot" element={<Dabot />} />
           <Route path="/connect4" element={<Connect4 />} />

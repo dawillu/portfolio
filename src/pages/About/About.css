@@ -63,6 +63,18 @@
   border-radius: 20px;
 }
 
+.about-description3 {
+  color: rgb(220, 215, 216);
+  position: absolute;
+  font-weight: 300;
+  padding: 10px;
+  margin: 10%;
+  margin-bottom: 0;
+  backdrop-filter: blur(4px);
+  border: solid 0.4px #555;
+  border-radius: 20px;
+}
+
 .about-scrolldown {
   color: rgb(220, 215, 216);
   position: absolute;
@@ -72,6 +84,11 @@
   border: solid 0.4px #555;
   border-radius: 20px;
   bottom: 30px;
+}
+
+.about-scrolldown:hover {
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 .bottom-left-text {
@@ -194,6 +211,11 @@
 
   .photo-grid > div:nth-child(n + 5) {
     display: block;
+  }
+
+  .top-left-text, .top-right-text, .bottom-left-text {
+    visibility: hidden;
+    width: 0;
   }
 }
 

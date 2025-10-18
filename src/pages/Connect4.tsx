@@ -46,7 +46,7 @@ const Connect4: React.FC = () => {
           lightBackground: false,
         }}
       />
-      <ProjectNavigation nextPath="/tictactoe" />
+      <ProjectNavigation nextPath="/TicTacToe" />
     </>
   );
 };

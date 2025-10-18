@@ -58,7 +58,7 @@
 }
 
 .down-up {
-  animation: down-up 3s;
+  animation: down-up 0.7s cubic-bezier(.5,.2,.71,.14);
 }
 
 @keyframes down-up {
@@ -78,9 +78,11 @@
 
 @keyframes grow {
   0% {
+    opacity: 0;
     scale: 0.5;
   }
   100% {
+    opacity: 1;
     scale: 1;
   }
 }

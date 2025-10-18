@@ -3,6 +3,7 @@ import Footer from "../../components/Footer/Footer";
 import Navbar from "../../components/Navbar/Navbar";
 
 import "./About.css";
+import { Link } from "react-scroll";
 
 const About: React.FC = () => {
   const images = [
@@ -55,14 +56,23 @@ const About: React.FC = () => {
       <Navbar />
       <header id="about-logo" className="about-logo">
         <img src={"/assets/images/about/logo.png"} loading="eager" />
-        <div className="about-scrolldown">
-          Scroll Down
-        </div>
+        <Link
+          to="about"
+          smooth={true}
+          duration={700}
+          className="about-scrolldown"
+          aria-hidden="true"
+        >
+            Scroll Down
+        </Link>
         <div className="about-description1">
           "I aim for perfection"
         </div>
         <div className="about-description2">
           "but I know a little mess can spark creativity"
+        </div> 
+        <div className="about-description3">
+          "so I code with passion and a touch of chaos"
         </div> 
 
         <div className="top-left-text">

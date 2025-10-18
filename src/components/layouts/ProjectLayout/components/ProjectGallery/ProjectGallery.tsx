@@ -2,7 +2,7 @@ import styles from "./ProjectGallery.module.css";
 
 interface ProjectGalleryProps {
   images: string[];
-  title: string;
+  title?: string | "";
 }
 
 const ProjectGallery: React.FC<ProjectGalleryProps> = ({ images, title }) => {
