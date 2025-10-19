@@ -24,7 +24,7 @@ const projects: Project[] = [
   },
   {
     id: "airroutes",
-    name: "AIR ROUTE",
+    name: "AIR ROUTES",
     hoverText: "flight cost simulator",
     hoverTextTop: "C / Dijkstra's Algorithm",
     path: "/AirRoutes",

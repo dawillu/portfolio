@@ -30,7 +30,7 @@ const Navbar: React.FC = () => {
                   </li>
                   <li>
                     <a
-                      href="/about"
+                      href="/About"
                       className="menulink"
                     >
                       about,

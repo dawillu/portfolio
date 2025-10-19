@@ -1,8 +1,6 @@
 import ProjectNavigation from "../../components/layouts/ProjectLayout/components/ProjectNavigation/ProjectNavigation";
 import ProjectLayout from "../../components/layouts/ProjectLayout/ProjectLayout";
 
-import "./Dawillu.css";
-
 const Dawillu: React.FC = () => {
   return (
     <>

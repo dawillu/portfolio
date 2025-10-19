@@ -7,12 +7,14 @@
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
+  width: 100vw;
   position: relative;
+  overflow: hidden;
 }
 
 .about-logo img {
   width: 35%;
-  min-width: 350px;
+  min-width: 300px;
   margin-bottom: 40vh;
 }
 
