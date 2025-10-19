@@ -13,24 +13,24 @@ const GalaxyTrucker: React.FC = () => {
           title: "Galaxy Trucker",
           logoPath: "/assets/images/galaxyTrucker/projectlogo.png",
           year: "2025",
-          languages: "Java · JavaFX · RMI · Sockets",
+          languages: "Java / JavaFX",
           siteUrl: "https://github.com/dawillu/ing-sw-2025-lu-han-mariotti-jin",
           siteName: "Explore the Code",
           contentSections: [
             {
               type: "description",
               headTitle:
-                "A production-grade academic remake of Vlaada Chvátil's board game with client-server multiplayer, GUI/TUI, and full documentation.",
+                "A production-grade academic remake of Vlaada Chvatil's board game with client-server multiplayer architecture.",
               sections: [
                 {
                   title: "THE PROJECT",
-                  label: "TEAMWORK · MULTIPLAYER · FAITHFUL DESIGN",
+                  label: "TEAMWORK, MULTIPLAYER, FAITHFUL DESIGN",
                   description:
                     "Complete digital adaptation of Galaxy Trucker with client-server architecture, simultaneous games, and both GUI and TUI. Built by a team of four with rigorous engineering practices, fully mirroring shipbuilding, journey hazards, and scoring.",
                 },
                 {
                   title: "TECHNICAL OVERVIEW",
-                  label: "JAVA · JAVAFX · RMI/SOCKETS",
+                  label: "JAVA, JAVAFX, RMI/SOCKETS",
                   description:
                     "Clean MVC across model, view, and controllers. Event-driven updates, explicit game state, and robust networking (RMI and sockets). Rich JavaFX GUI with image atlas, effects, and responsive layout. Ship systems, cards, penalties, and journey flow are fully implemented with maintainable code and JavaDoc.",
                 },
@@ -47,15 +47,13 @@ const GalaxyTrucker: React.FC = () => {
         <div data-animation="grow" className={styles.mvc}>
           Model - View - Controller
           <br />
-          Networking - Persistence
-          <br />
-          Documentation - Testing
+          Documentation and Testing
         </div>
 
         <ProjectWideDescription
           title="MVC ARCHITECTURE"
           label="SEPARATION OF CONCERNS"
-          description="Domain logic lives in the model; JavaFX/TUI render the view; controllers orchestrate gameplay and networking. The controller exposes a remote interface to clients; the view reacts to state updates and renders boards, cards, and ships."
+          description="Domain logic lives in the model; JavaFX/TUI render the view; controllers orchestrate gameplay and networking. The controller exposes a remote interface to clients. The view reacts to state updates and renders boards, cards, and ships."
         />
 
         <CodeSection
@@ -85,8 +83,8 @@ controller.startJourney();   // proceeds to journey after build
 
         <ProjectWideDescription
           title="SHIP CONSTRUCTION SYSTEM"
-          label="TILE VALIDATION · LIVE STATS"
-          description="Timed shipbuilding with connection validation, energy/range shields, crew, storage, and reactors. Stats update after each placement; illegal connections are rejected; the board remains consistent before the journey begins."
+          label="TILE VALIDATION AND LIVE STATS"
+          description="Timed shipbuilding with connection validation, energy/range shields, crew, storage, and reactors. Stats update after each placement. Illegal connections are rejected and the board remains consistent before the journey begins."
         />
 
         <CodeSection
@@ -116,8 +114,8 @@ public class ShipBuilderService {
 
         <ProjectWideDescription
           title="EVENT-DRIVEN GAMEPLAY"
-          label="PHASES · OBSERVER · STATE MACHINE"
-          description="Players advance through building, choosing positions, journey encounters, and scoring. A clear state machine drives transitions; observers propagate updates to the UI."
+          label="PHASES, OBSERVER, AND STATE MACHINE"
+          description="Players advance through building, choosing positions, journey encounters, and scoring. A clear state machine drives transitions, and observers propagate updates to the UI."
         />
 
         <CodeSection
@@ -144,7 +142,7 @@ public class PhaseMachine {
 
         <ProjectWideDescription
           title="SPACE HAZARDS & ENCOUNTERS"
-          label="CARDS · VISITOR · PENALTIES"
+          label="CARDS, VISITOR PATTERN, AND PENALTIES"
           description="Journey cards (e.g., Epidemic, Meteors, Planets) are executed via a visitor on the server. Penalties and rewards modify ship boards, goods, crew, batteries, and positions according to the rules."
         />
 
@@ -165,7 +163,7 @@ public void playNext(Game game) {
 
         <ProjectWideDescription
           title="JAVAFX USER INTERFACE"
-          label="RENDERING · ASSETS · EFFECTS"
+          label="RENDERING, ASSETS, AND EFFECTS"
           description="Responsive JavaFX components render ship boards, flight boards, and cards. Centralized image loading and helper utilities keep rendering fast and consistent."
         />
 
@@ -186,8 +184,8 @@ public void setUpBoard(int level, ImageView board, Pane container) {
 
         <ProjectWideDescription
           title="TEAM COLLABORATION"
-          label="PROCESS · CI-LIKE PRACTICES"
-          description="Git workflows with branching and PRs, iterative sprints, and code reviews. Deliverables include runnable JARs, UML, coverage, and complete JavaDoc for maintainability."
+          label="PROCESS AND CI-LIKE PRACTICES"
+          description="Git workflows with branching and PRs, iterative sprints, and code reviews. Deliverables include runnable JARs, UML diagrams, test coverage reports, and complete JavaDoc for maintainability."
         />
 
         <ProjectGallery
@@ -204,8 +202,8 @@ public void setUpBoard(int level, ImageView board, Pane container) {
 
         <ProjectWideDescription
           title="DOCUMENTATION & TESTING"
-          label="JAVADOC · COVERAGE · INTEGRATION"
-          description="Comprehensive JavaDoc, unit tests for core logic, and GUI integration tests. Final deliverables include JavaDoc, coverage reports, UML diagrams, and runnable JARs."
+          label="JAVADOC, COVERAGE, AND INTEGRATION"
+          description="Comprehensive JavaDoc, unit tests for core logic, and GUI integration tests. Final deliverables include JavaDoc, test coverage reports, UML diagrams, and runnable JARs."
         />
       </div>
 

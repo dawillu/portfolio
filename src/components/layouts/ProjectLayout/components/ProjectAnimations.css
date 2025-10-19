@@ -2,6 +2,7 @@
   justify-content: center;
   align-items: center;
   padding: 0 5%;
+  overflow-x: hidden;
 }
 
 [data-animation] {
@@ -15,12 +16,14 @@
 }
 
 .fade-in-left {
+  will-change: transform;
+  animation-fill-mode: both;
   animation: fade-in-left 1.5s;
 }
 
 @keyframes fade-in-left {
   0% {
-    transform: translateX(30%);
+    transform: translateX(-40px);
     opacity: 0;
   }
   100% {
@@ -30,12 +33,14 @@
 }
 
 .fade-in-right {
+  will-change: transform;
+  animation-fill-mode: both;
   animation: fade-in-right 1.5s;
 }
 
 @keyframes fade-in-right {
   0% {
-    transform: translateX(-30%);
+    transform: translateX(40px);
     opacity: 0;
   }
   100% {

@@ -40,13 +40,6 @@
   background-color: #27c93f;
 }
 
-.code-language {
-  font-size: 12px;
-  color: #858585;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-
 .code-content {
   display: flex;
   overflow-x: auto;
@@ -62,6 +55,11 @@
   font-size: 11px;
   line-height: 1.6;
   white-space: pre;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transform: translateZ(0);
 }
 
 .code-block code {
