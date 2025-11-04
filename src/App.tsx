@@ -1,8 +1,8 @@
 import Loader from "./components/ui/Loader/Loader";
 import Navbar from "./components/Navbar/Navbar";
-import Welcome from "./components/WelcomeSection/Welcome";
-import ProjectsSection from "./components/ProjectsSection/ProjectsSection";
-import CreationsSection from "./components/CreationsSection/CreationsSection";
+import Welcome from "./components/HomePage/WelcomeSection/Welcome";
+import ProjectsSection from "./components/HomePage/ProjectsSection/ProjectsSection";
+import CreationsSection from "./components/HomePage/CreationsSection/CreationsSection";
 import Footer from "./components/Footer/Footer";
 import {
   BrowserRouter as Router,
