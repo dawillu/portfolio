@@ -22,6 +22,15 @@ const projects: Project[] = [
     image: "/assets/images/dynamicImages/dawillu.png",
     link: "/Dawillu",
   },
+    {
+    id: "lifeatpark",
+    name: "LIFE@PARK",
+    hoverText: "human-computer interaction project",
+    hoverTextTop: "Figma - UX Research",
+    path: "/lifeatpark",
+    image: "/assets/images/dynamicImages/lifeatpark.png",
+    link: "/LifeAtPark",
+  },
   {
     id: "airroutes",
     name: "AIR ROUTES",

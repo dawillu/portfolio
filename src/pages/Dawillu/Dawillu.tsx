@@ -41,7 +41,7 @@ const Dawillu: React.FC = () => {
           lightBackground: false,
         }}
       />
-      <ProjectNavigation nextPath="/AirRoutes" />
+      <ProjectNavigation nextPath="/LifeAtPark" />
     </>
   );
 };

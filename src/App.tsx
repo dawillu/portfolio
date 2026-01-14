@@ -10,6 +10,7 @@ import {
   Route,
 } from "react-router-dom";
 import Dawillu from "./pages/Dawillu/Dawillu";
+import LifeAtPark from "./pages/LifeAtPark/LifeAtPark";
 import AirRoutes from "./pages/AirRoutes/AirRoutes";
 import GalaxyTrucker from "./pages/GalaxyTrucker/GalaxyTrucker";
 import Dabot from "./pages/Dabot/Dabot";
@@ -44,6 +45,7 @@ function AppContent() {
             }
           />
           <Route path="/dawillu" element={<Dawillu />} />
+          <Route path="/lifeatpark" element={<LifeAtPark />} />
           <Route path="/airroutes" element={<AirRoutes />} />
           <Route path="/galaxytrucker" element={<GalaxyTrucker />} />
           <Route path="/dabot" element={<Dabot />} />
