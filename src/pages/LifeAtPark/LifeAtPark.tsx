@@ -2,7 +2,7 @@ import Footer from "../../components/Footer/Footer";
 import ProjectDescription from "../../components/layouts/ProjectLayout/components/ProjectDescription/ProjectDescription";
 import ProjectWideDescription from "../../components/layouts/ProjectLayout/components/ProjectDescription/ProjectWideDescription";
 import ProjectGallery from "../../components/layouts/ProjectLayout/components/ProjectGallery/ProjectGallery";
-import ProjectNavigation from "../../components/layouts/ProjectLayout/components/ProjectNavigation/ProjectNavigation";
+// import ProjectNavigation from "../../components/layouts/ProjectLayout/components/ProjectNavigation/ProjectNavigation";
 import ProjectLayout from "../../components/layouts/ProjectLayout/ProjectLayout";
 import styles from "./LifeAtPark.module.css";
 
