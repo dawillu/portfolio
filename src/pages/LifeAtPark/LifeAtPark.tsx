@@ -180,7 +180,7 @@ const LifeAtPark: React.FC = () => {
             className={styles.openGalleryButton} 
             onClick={() => setIsReportOpen(true)}
           >
-            View Report (8 pages)
+            View Report
           </button>
         </div>
 
