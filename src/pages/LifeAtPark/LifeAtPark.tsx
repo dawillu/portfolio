@@ -85,15 +85,15 @@ const LifeAtPark: React.FC = () => {
           ]}
         />
         <div data-animation="grow" className={styles.center}>
-          <a className={styles.prototypeButton} href="https://www.figma.com/proto/Hn1FlwLxKqbrMCmRIRjlF2/Prototipo-high-fidelity?node-id=0-1&t=Ry4JKZDZ5DIN4eQY-1" target="_blank" rel="noopener noreferrer">
-            try<img src="/assets/images/lifeAtPark/projectlogo.png" className={styles.image} />now
-          </a>
+            try the prototype <img src="/assets/images/lifeAtPark/simplelogo.png" className={styles.image} /> now
         </div>
-        <div className={styles.prototypeImg}>
-          <img data-animation="down-up" src="/assets/images/lifeAtPark/prototype1.png" alt="" />
-          <img data-animation="down-up" src="/assets/images/lifeAtPark/prototype2.png" alt="" />
-          <img data-animation="down-up" src="/assets/images/lifeAtPark/prototype3.png" alt="" />
-        </div>
+        <a href="https://www.figma.com/proto/Hn1FlwLxKqbrMCmRIRjlF2/Prototipo-high-fidelity?node-id=0-1&t=Ry4JKZDZ5DIN4eQY-1" target="_blank" rel="noopener noreferrer">
+          <div className={styles.prototypeImg}>
+            <img data-animation="down-up" src="/assets/images/lifeAtPark/prototype1.png" alt="" />
+            <img data-animation="down-up" src="/assets/images/lifeAtPark/prototype2.png" alt="" />
+            <img data-animation="down-up" src="/assets/images/lifeAtPark/prototype3.png" alt="" />
+          </div>
+        </a>
 
         <ProjectWideDescription
           title="VOICE OF THE CITIZEN"
@@ -141,6 +141,16 @@ const LifeAtPark: React.FC = () => {
             </a>
           ))}
         </div>
+        <ProjectWideDescription
+          title="FINAL PRESENTATION SLIDES"
+          label="COMPREHENSIVE OVERVIEW"
+          description=""
+        />
+        <ProjectGallery
+          images={[
+            ...Array.from({ length: 63 }, (_, i) => `assets/images/lifeAtPark/ppt/${i + 1}.png`)
+          ]}
+        />
       </div>
 
       {/* <ProjectNavigation nextPath="/AirRoutes" /> */}
