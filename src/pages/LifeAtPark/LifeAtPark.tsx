@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Footer from "../../components/Footer/Footer";
 import ProjectDescription from "../../components/layouts/ProjectLayout/components/ProjectDescription/ProjectDescription";
 import ProjectWideDescription from "../../components/layouts/ProjectLayout/components/ProjectDescription/ProjectWideDescription";
@@ -7,6 +8,9 @@ import ProjectLayout from "../../components/layouts/ProjectLayout/ProjectLayout"
 import styles from "./LifeAtPark.module.css";
 
 const LifeAtPark: React.FC = () => {
+  const [isGalleryOpen, setIsGalleryOpen] = useState(false);
+  const [isReportOpen, setIsReportOpen] = useState(false);
+
   const teamMembers = [
     { name: "Tommaso Bazzanella", src: "assets/images/lifeAtPark/team/tommaso.png" },
     { name: "William Lu", src: "assets/images/lifeAtPark/team/william.png" },
@@ -39,7 +43,7 @@ const LifeAtPark: React.FC = () => {
           contentSections: [
             {
               type: "description",
-              headTitle: "“FIND AND ENJOY YOUR PARK WITHOUT A WORRY”",
+              headTitle: "FIND AND ENJOY YOUR PARK WITHOUT A WORRY",
               sections: [
                 {
                   title: "THE PROBLEM & VISION",
@@ -49,7 +53,7 @@ const LifeAtPark: React.FC = () => {
                 {
                   title: "THE PLATFORM",
                   label: "INTUITIVE SMARTPHONE EXPERIENCE",
-                  description: `Leveraging a mobile-first approach, Life@Park puts the city’s green infrastructure in the user's pocket. Our high-fidelity solution features real-time equipment filtering, interactive trail mapping, and a social coordination layer that allows users to seamlessly join community events or organize activities with friends.`,
+                  description: `Leveraging a mobile-first approach, Life@Park puts the city's green infrastructure in the user's pocket. Our high-fidelity solution features real-time equipment filtering, interactive trail mapping, and a social coordination layer that allows users to seamlessly join community events or organize activities with friends.`,
                 },
               ],
             },
@@ -84,6 +88,33 @@ const LifeAtPark: React.FC = () => {
             "assets/images/lifeAtPark/ppt/ppt3.png",
           ]}
         />
+        <div className={styles.galleryButtonContainer}>
+          <button 
+            className={styles.openGalleryButton} 
+            onClick={() => setIsGalleryOpen(true)}
+          >
+            View All Slides
+          </button>
+        </div>
+
+        {isGalleryOpen && (
+          <div className={styles.modalOverlay} onClick={() => setIsGalleryOpen(false)}>
+            <div className={styles.modalContent} onClick={(e) => e.stopPropagation()}>
+              <button 
+                className={styles.closeButton} 
+                onClick={() => setIsGalleryOpen(false)}
+              >
+                ✕
+              </button>
+              <ProjectGallery
+                images={[
+                  ...Array.from({ length: 63 }, (_, i) => `assets/images/lifeAtPark/ppt/${i + 1}.png`)
+                ]}
+              />
+            </div>
+          </div>
+        )}
+
         <div data-animation="grow" className={styles.center}>
             try the prototype <img src="/assets/images/lifeAtPark/simplelogo.png" className={styles.image} /> now
         </div>
@@ -101,12 +132,11 @@ const LifeAtPark: React.FC = () => {
           description="To build a truly inclusive solution, we expanded our research beyond institutional borders to a diverse demographic of urban citizens. Our survey revealed a universal tension: while parks are highly valued, barriers such as safety concerns, lack of real-time facility data, and 'social friction' prevent daily engagement. This broad data set validated Life@Park as a vital tool for anyone—from students to professionals—seeking to reclaim their city's green spaces."
         />
 
-          <div className={styles.survey}>
-              <div>
+        <div className={styles.survey}>
+          <div>
             <a href="https://docs.google.com/forms/d/e/1FAIpQLSc4YDRMrtARfVPhlR8FwKlLJ66sy3SC5on4Ehehqk1Ivn9Xyw/viewform?usp=dialog" target="_blank">
-                <img data-animation="fade-in-right" src="/assets/images/lifeAtPark/survey.png"/>
+              <img data-animation="fade-in-right" src="/assets/images/lifeAtPark/survey.png"/>
             </a>
-              </div>
           </div>
         </div>
 
@@ -126,12 +156,10 @@ const LifeAtPark: React.FC = () => {
           ]}
         />
 
-        <div id="deep-description-container">
-          <div className={styles.scatteredContainer}>
+        <div className={styles.scatteredContainer}>
           {features.map((feature, index) => (
-            <a href={feature.link} target="_blank">
+            <a key={index} href={feature.link} target="_blank" rel="noopener noreferrer">
               <div
-                key={index}
                 className={styles.scatteredElement}
                 data-feature={feature.type}
                 data-animation="fade-in"
@@ -141,16 +169,45 @@ const LifeAtPark: React.FC = () => {
             </a>
           ))}
         </div>
+
         <ProjectWideDescription
-          title="FINAL PRESENTATION SLIDES"
-          label="COMPREHENSIVE OVERVIEW"
+          title="REPORT"
+          label="DETAILED DOCUMENTATION"
           description=""
         />
-        <ProjectGallery
-          images={[
-            ...Array.from({ length: 63 }, (_, i) => `assets/images/lifeAtPark/ppt/${i + 1}.png`)
-          ]}
-        />
+        <div className={styles.galleryButtonContainer}>
+          <button 
+            className={styles.openGalleryButton} 
+            onClick={() => setIsReportOpen(true)}
+          >
+            View Report (8 pages)
+          </button>
+        </div>
+
+        {isReportOpen && (
+          <div className={styles.modalOverlay} onClick={() => setIsReportOpen(false)}>
+            <div className={styles.modalContent} onClick={(e) => e.stopPropagation()}>
+              <button 
+                className={styles.closeButton} 
+                onClick={() => setIsReportOpen(false)}
+              >
+                ✕
+              </button>
+              <ProjectGallery
+                images={[
+                  "assets/images/lifeAtPark/highfidelityreport/hfr1.png",
+                  "assets/images/lifeAtPark/highfidelityreport/hfr2.png",
+                  "assets/images/lifeAtPark/highfidelityreport/hfr3.png",
+                  "assets/images/lifeAtPark/highfidelityreport/hfr4.png",
+                  "assets/images/lifeAtPark/highfidelityreport/hfr5.png",
+                  "assets/images/lifeAtPark/highfidelityreport/hfr6.png",
+                  "assets/images/lifeAtPark/highfidelityreport/hfr7.png",
+                  "assets/images/lifeAtPark/highfidelityreport/hfr8.png",
+                ]}
+              />
+            </div>
+          </div>
+        )}
       </div>
 
       {/* <ProjectNavigation nextPath="/AirRoutes" /> */}
