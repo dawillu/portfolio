@@ -189,7 +189,6 @@
 }
 
 .openGalleryButton {
-    margin-top: calc(env(safe-area-inset-top));
     background: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.2);
@@ -205,11 +204,8 @@
 }
 
 .openGalleryButton:hover {
-    margin-top: calc(env(safe-area-inset-top));
     background: rgba(100, 160, 100, 0.5);
     backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    transform: translateY(-2px);
     box-shadow: 0 4px 15px rgba(192, 195, 192, 0.2);
 }
 
@@ -284,6 +280,7 @@
     font-weight: bold;
     color: #c4c7c3;
     transition: transform 0.35s ease, color 0.35s ease, text-shadow 0.35s ease;
+    cursor: default;
 }
 
 .slogan::after {
