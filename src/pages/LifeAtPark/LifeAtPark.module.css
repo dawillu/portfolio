@@ -2,8 +2,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 3vh;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
 }
 
 .image {
@@ -20,7 +19,7 @@
     padding-top: 5vh;
     padding-bottom: 5vh;
     font-size: 3rem;
-    color: rgb(122, 186, 122);
+    color: #c4c7c3;
 }
 
 .teamSection {
@@ -72,7 +71,7 @@
     align-items: center;
     justify-content: center;
     font-family: "Sohne";
-    font-size: 1.3rem;
+    font-size: 1rem;
     color: #f9f7f0;
     background: linear-gradient(to bottom, rgba(28, 28, 28, 0.6), rgba(28, 28, 28, 0.6));
     opacity: 0;
@@ -186,27 +185,32 @@
 .galleryButtonContainer {
     display: flex;
     justify-content: center;
-    padding: 3vh 0;
+    padding-bottom: 5vh;
 }
 
 .openGalleryButton {
-    background: rgb(122, 186, 122);
+    margin-top: calc(env(safe-area-inset-top));
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
     color: #f9f7f0;
     font-family: "Sohne";
-    font-weight: 600;
-    font-size: 1.2rem;
-    padding: 15px 40px;
+    font-size: 2vh;
+    padding: 2vh 3vh;
     border: none;
-    border-radius: 30px;
+    border-radius: 30vh;
     cursor: pointer;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(122, 186, 122, 0.3);
+    box-shadow: 0 4px 15px rgba(148, 151, 148, 0.2);
 }
 
 .openGalleryButton:hover {
-    background: rgb(100, 160, 100);
+    margin-top: calc(env(safe-area-inset-top));
+    background: rgba(100, 160, 100, 0.5);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(122, 186, 122, 0.4);
+    box-shadow: 0 4px 15px rgba(192, 195, 192, 0.2);
 }
 
 .modalOverlay {
@@ -225,29 +229,40 @@
 }
 
 .modalContent {
+    margin-top: calc(env(safe-area-inset-top));
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.2);
     padding: 30px;
     max-width: 90vw;
-    max-height: 90vh;
+    max-height: 87vh;
     overflow-y: auto;
     position: relative;
     box-shadow: 0 10px 50px rgba(0, 0, 0, 0.3);
 }
 
-.closeButton {
+.closeButtonContainer {
+    width: 100%;
+    height: auto;
     position: sticky;
-    top: 10px;
-    right: 10px;
+    top: 0;
+}
+
+.closeButton {
+    margin-top: calc(env(safe-area-inset-top));
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    right: -15px;
+    top: -15px;
+    position: absolute;
     float: right;
-    background: rgb(122, 186, 122);
     color: #f9f7f0;
     border: none;
     border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    font-size: 1.5rem;
+    width: 35px;
+    height: 35px;
+    font-size: 1rem;
     cursor: pointer;
     transition: all 0.3s ease;
     z-index: 10;
@@ -258,6 +273,58 @@
 }
 
 .closeButton:hover {
-    background: rgb(100, 160, 100);
+    background: rgba(100, 160, 100, 0.5);
     transform: rotate(90deg);
+}
+
+.slogan {
+    position: relative;
+    display: inline-block;
+    line-height: 1;
+    font-size: 8vw;
+    font-weight: bold;
+    color: #c4c7c3;
+    transition: transform 0.35s ease, color 0.35s ease, text-shadow 0.35s ease;
+}
+
+.slogan::after {
+    content: "";
+    position: absolute;
+    inset: 0 auto auto -4vw;
+    width: 108%;
+    height: 108%;
+    background: radial-gradient(circle at 30% 50%, rgba(141, 180, 144, 0.35), transparent 55%),
+                radial-gradient(circle at 70% 60%, rgba(55, 142, 74, 0.4), transparent 60%);
+    filter: blur(8px);
+    opacity: 0;
+    transform: translateY(10px) scale(0.96);
+    transition: opacity 0.35s ease, transform 0.35s ease;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.slogan:hover {
+    color: #f3cfc6;
+    transform: translateY(-6px) rotate(-1.1deg) scale(1.02);
+    text-shadow: 0 14px 28px rgba(0, 0, 0, 0.18);
+}
+
+.slogan:hover::after {
+    opacity: 1;
+    transform: translateY(2px) scale(1.05);
+}
+
+.subslogan {
+    font-size: 2vw;
+    text-align: end;
+    margin-left: 4vh;
+    margin-right: 5%;
+    color: #ffffff;
+}
+
+.divider {
+    width: 100%;
+    height: 2px;
+    background-color: #bbc6b7;
+    margin: 5vh auto;
 }

@@ -9,7 +9,6 @@ import styles from "./LifeAtPark.module.css";
 
 const LifeAtPark: React.FC = () => {
   const [isGalleryOpen, setIsGalleryOpen] = useState(false);
-  const [isReportOpen, setIsReportOpen] = useState(false);
 
   const teamMembers = [
     { name: "Tommaso Bazzanella", src: "assets/images/lifeAtPark/team/tommaso.png" },
@@ -100,23 +99,36 @@ const LifeAtPark: React.FC = () => {
         {isGalleryOpen && (
           <div className={styles.modalOverlay} onClick={() => setIsGalleryOpen(false)}>
             <div className={styles.modalContent} onClick={(e) => e.stopPropagation()}>
-              <button 
-                className={styles.closeButton} 
-                onClick={() => setIsGalleryOpen(false)}
-              >
-                ✕
-              </button>
+              <div className={styles.closeButtonContainer}>
+                <button 
+                  className={styles.closeButton} 
+                  onClick={() => setIsGalleryOpen(false)}
+                >
+                  ✕
+                </button>
+              </div>
               <ProjectGallery
                 images={[
-                  ...Array.from({ length: 63 }, (_, i) => `assets/images/lifeAtPark/ppt/${i + 1}.png`)
+                  ...Array.from({ length: 62 }, (_, i) => `assets/images/lifeAtPark/ppt/${i + 2}.png`)
                 ]}
               />
             </div>
           </div>
         )}
 
+        <div className={styles.divider}></div>
+
+        <div data-animation="grow" className={styles.slogan}>
+          FIND AND ENJOY YOUR PARK WITHOUT A WORRY
+        </div>
+        <div className={styles.subslogan} data-animation="fade-in">
+          by Fill your Day
+        </div>
+
+        <div className={styles.divider}></div>
+
         <div data-animation="grow" className={styles.center}>
-            try the prototype <img src="/assets/images/lifeAtPark/simplelogo.png" className={styles.image} /> now
+            try<img src="/assets/images/lifeAtPark/simplelogo.png" className={styles.image} />now
         </div>
         <a href="https://www.figma.com/proto/Hn1FlwLxKqbrMCmRIRjlF2/Prototipo-high-fidelity?node-id=0-1&t=Ry4JKZDZ5DIN4eQY-1" target="_blank" rel="noopener noreferrer">
           <div className={styles.prototypeImg}>
@@ -139,23 +151,25 @@ const LifeAtPark: React.FC = () => {
             </a>
           </div>
         </div>
+      </div>
 
-        <ProjectDescription
-          headTitle="ACADEMIC PROJECT FRAMEWORK"
-          sections={[
-            {
-              title: "PHASE 1: NEED FINDING & ANALYSIS",
-              label: "HW1 & HW2 DELIVERABLES",
-              description: `In alignment with FHCI requirements, our project began with rigorous need-finding and user research (HW1). We focused on thematic analysis to synthesize qualitative data, which led to the refinement of our project focus and the creation of detailed user personas and interaction scenarios (HW2).`
-            },
-            {
-              title: "PHASE 2: PROTOTYPING & EVALUATION",
-              label: "HW3 TO HW6 DELIVERABLES",
-              description: `Following the course roadmap, we moved from low-fidelity task analysis and storyboarding (HW3) to a medium-fidelity interactive prototype (HW4). The final stage involves expert-based heuristic evaluation (HW5) and high-fidelity usability testing to ensure the interface meets professional HCI standards before final delivery (HW6).`
-            },
-          ]}
-        />
+      <ProjectDescription
+        headTitle="ACADEMIC PROJECT FRAMEWORK"
+        sections={[
+          {
+            title: "PHASE 1: NEED FINDING & ANALYSIS",
+            label: "HW1 & HW2 DELIVERABLES",
+            description: `In alignment with FHCI requirements, our project began with rigorous need-finding and user research (HW1). We focused on thematic analysis to synthesize qualitative data, which led to the refinement of our project focus and the creation of detailed user personas and interaction scenarios (HW2).`
+          },
+          {
+            title: "PHASE 2: PROTOTYPING & EVALUATION",
+            label: "HW3 TO HW6 DELIVERABLES",
+            description: `Following the course roadmap, we moved from low-fidelity task analysis and storyboarding (HW3) to a medium-fidelity interactive prototype (HW4). The final stage involves expert-based heuristic evaluation (HW5) and high-fidelity usability testing to ensure the interface meets professional HCI standards before final delivery (HW6).`
+          },
+        ]}
+      />
 
+      <div id="deep-description-container">
         <div className={styles.scatteredContainer}>
           {features.map((feature, index) => (
             <a key={index} href={feature.link} target="_blank" rel="noopener noreferrer">
@@ -169,45 +183,6 @@ const LifeAtPark: React.FC = () => {
             </a>
           ))}
         </div>
-
-        <ProjectWideDescription
-          title="REPORT"
-          label="DETAILED DOCUMENTATION"
-          description=""
-        />
-        <div className={styles.galleryButtonContainer}>
-          <button 
-            className={styles.openGalleryButton} 
-            onClick={() => setIsReportOpen(true)}
-          >
-            View Report
-          </button>
-        </div>
-
-        {isReportOpen && (
-          <div className={styles.modalOverlay} onClick={() => setIsReportOpen(false)}>
-            <div className={styles.modalContent} onClick={(e) => e.stopPropagation()}>
-              <button 
-                className={styles.closeButton} 
-                onClick={() => setIsReportOpen(false)}
-              >
-                ✕
-              </button>
-              <ProjectGallery
-                images={[
-                  "assets/images/lifeAtPark/highfidelityreport/hfr1.png",
-                  "assets/images/lifeAtPark/highfidelityreport/hfr2.png",
-                  "assets/images/lifeAtPark/highfidelityreport/hfr3.png",
-                  "assets/images/lifeAtPark/highfidelityreport/hfr4.png",
-                  "assets/images/lifeAtPark/highfidelityreport/hfr5.png",
-                  "assets/images/lifeAtPark/highfidelityreport/hfr6.png",
-                  "assets/images/lifeAtPark/highfidelityreport/hfr7.png",
-                  "assets/images/lifeAtPark/highfidelityreport/hfr8.png",
-                ]}
-              />
-            </div>
-          </div>
-        )}
       </div>
 
       {/* <ProjectNavigation nextPath="/AirRoutes" /> */}
