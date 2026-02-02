@@ -1,5 +1,5 @@
 import React from "react";
-// import { Link as ScrollLink } from "react-scroll";
+import { Link as ScrollLink } from "react-scroll";
 import "./Navbar.css";
 
 const Navbar: React.FC = () => {
@@ -16,7 +16,7 @@ const Navbar: React.FC = () => {
           </div>
 
             <div id="right-nav" className="container">
-              {/* <div>
+              <div>
                 <ul className="menu font-primary">
                   <li>
                     <ScrollLink
@@ -47,7 +47,7 @@ const Navbar: React.FC = () => {
                     </ScrollLink>
                   </li>
                 </ul>
-              </div> */}
+              </div>
             </div>
         </nav>
       </div>

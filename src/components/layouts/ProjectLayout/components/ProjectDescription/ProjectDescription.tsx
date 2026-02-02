@@ -40,7 +40,7 @@ const ProjectDescription: React.FC<ProjectDescriptionProps> = ({
             >
               {section.label}
             </div>
-            <div className="description">{section.description}</div>
+            <div dangerouslySetInnerHTML={{ __html: section.description }} className="description"></div>
           </div>
         ))}
       </div>

@@ -2,7 +2,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1.3rem;
+    font-weight: 600;
+    font-size: 1.6rem;
+    color: #83e164;
 }
 
 .image {
@@ -91,6 +93,7 @@
     display: flex;
     overflow: visible;
     padding-bottom: 5vh;
+    padding-top: 3vh;
 }
 
 .prototypeImg img {
@@ -195,7 +198,7 @@
     color: #f9f7f0;
     font-family: "Sohne";
     font-size: 2vh;
-    padding: 2vh 3vh;
+    padding: 1.5vh 2.3vh;
     border: none;
     border-radius: 30vh;
     cursor: pointer;
@@ -270,52 +273,6 @@
 .closeButton:hover {
     background: rgba(100, 160, 100, 0.5);
     transform: rotate(90deg);
-}
-
-.slogan {
-    position: relative;
-    display: inline-block;
-    line-height: 1;
-    font-size: 8vw;
-    font-weight: bold;
-    color: #c4c7c3;
-    transition: transform 0.35s ease, color 0.35s ease, text-shadow 0.35s ease;
-    cursor: default;
-}
-
-.slogan::after {
-    content: "";
-    position: absolute;
-    inset: 0 auto auto -4vw;
-    width: 108%;
-    height: 108%;
-    background: radial-gradient(circle at 30% 50%, rgba(141, 180, 144, 0.35), transparent 55%),
-                radial-gradient(circle at 70% 60%, rgba(55, 142, 74, 0.4), transparent 60%);
-    filter: blur(8px);
-    opacity: 0;
-    transform: translateY(10px) scale(0.96);
-    transition: opacity 0.35s ease, transform 0.35s ease;
-    pointer-events: none;
-    z-index: -1;
-}
-
-.slogan:hover {
-    color: #f3cfc6;
-    transform: translateY(-6px) rotate(-1.1deg) scale(1.02);
-    text-shadow: 0 14px 28px rgba(0, 0, 0, 0.18);
-}
-
-.slogan:hover::after {
-    opacity: 1;
-    transform: translateY(2px) scale(1.05);
-}
-
-.subslogan {
-    font-size: 2vw;
-    text-align: end;
-    margin-left: 4vh;
-    margin-right: 5%;
-    color: #ffffff;
 }
 
 .divider {

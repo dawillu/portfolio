@@ -1,9 +1,8 @@
 import { useState } from "react";
-import Footer from "../../components/Footer/Footer";
 import ProjectDescription from "../../components/layouts/ProjectLayout/components/ProjectDescription/ProjectDescription";
 import ProjectWideDescription from "../../components/layouts/ProjectLayout/components/ProjectDescription/ProjectWideDescription";
 import ProjectGallery from "../../components/layouts/ProjectLayout/components/ProjectGallery/ProjectGallery";
-// import ProjectNavigation from "../../components/layouts/ProjectLayout/components/ProjectNavigation/ProjectNavigation";
+import ProjectNavigation from "../../components/layouts/ProjectLayout/components/ProjectNavigation/ProjectNavigation";
 import ProjectLayout from "../../components/layouts/ProjectLayout/ProjectLayout";
 import styles from "./LifeAtPark.module.css";
 
@@ -118,17 +117,8 @@ const LifeAtPark: React.FC = () => {
 
         <div className={styles.divider}></div>
 
-        <div data-animation="grow" className={styles.slogan}>
-          FIND AND ENJOY YOUR PARK WITHOUT A WORRY
-        </div>
-        <div className={styles.subslogan} data-animation="fade-in">
-          by Fill your Day
-        </div>
-
-        <div className={styles.divider}></div>
-
         <div data-animation="grow" className={styles.center}>
-            try<img src="/assets/images/lifeAtPark/simplelogo.png" className={styles.image} />now
+            TRY THE PROTOTYPE NOW
         </div>
         <a href="https://www.figma.com/proto/Hn1FlwLxKqbrMCmRIRjlF2/Prototipo-high-fidelity?node-id=0-1&t=Ry4JKZDZ5DIN4eQY-1" target="_blank" rel="noopener noreferrer">
           <div className={styles.prototypeImg}>
@@ -185,8 +175,7 @@ const LifeAtPark: React.FC = () => {
         </div>
       </div>
 
-      {/* <ProjectNavigation nextPath="/AirRoutes" /> */}
-      <Footer />
+      <ProjectNavigation nextPath="/AirRoutes" />
     </>
   );
 };

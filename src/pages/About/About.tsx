@@ -55,7 +55,9 @@ const About: React.FC = () => {
     <>
       <Navbar />
       <header id="about-logo" className="about-logo">
-        <img src={"/assets/images/about/logo.png"} loading="eager" />
+        <div className="about-name">
+          WILLIAM LU
+        </div>
         <Link
           to="about"
           smooth={true}
@@ -65,15 +67,6 @@ const About: React.FC = () => {
         >
             Scroll Down
         </Link>
-        <div className="about-description1">
-          "I aim for perfection"
-        </div>
-        <div className="about-description2">
-          "but I know a little mess can spark creativity"
-        </div> 
-        <div className="about-description3">
-          "so I code with passion and a touch of chaos"
-        </div> 
 
         <div className="top-left-text">
           Top-Left

@@ -41,42 +41,6 @@
   border-radius: 20px
 }
 
-.about-description1 {
-  color: rgb(220, 215, 216);
-  position: absolute;
-  font-weight: 300;
-  padding: 10px;
-  margin: 10%;
-  margin-bottom: 200px;
-  backdrop-filter: blur(4px);
-  border: solid 0.4px #555;
-  border-radius: 20px;
-}
-
-.about-description2 {
-  color: rgb(220, 215, 216);
-  position: absolute;
-  font-weight: 300;
-  padding: 10px;
-  margin: 10%;
-  margin-bottom: 100px;
-  backdrop-filter: blur(4px);
-  border: solid 0.4px #555;
-  border-radius: 20px;
-}
-
-.about-description3 {
-  color: rgb(220, 215, 216);
-  position: absolute;
-  font-weight: 300;
-  padding: 10px;
-  margin: 10%;
-  margin-bottom: 0;
-  backdrop-filter: blur(4px);
-  border: solid 0.4px #555;
-  border-radius: 20px;
-}
-
 .about-scrolldown {
   color: rgb(220, 215, 216);
   position: absolute;
@@ -241,4 +205,11 @@
   font-weight: 900;
   font-size: calc(20px + 4vw);
   color: antiquewhite;
+}
+
+.about-name {
+  font-size: calc(40px + 3vw);
+  font-weight: 900;
+  padding-bottom: 200px;
+  position: absolute;opacity: 0.8;
 }
