@@ -10,7 +10,12 @@ const ProjectGallery: React.FC<ProjectGalleryProps> = ({ images, title }) => {
     <div className={styles.imagesContainer}>
       {images.map((image, index) => (
         <div className={styles.images} key={index}>
-          <img src={image} alt={`${title} preview ${index + 1}`} />
+          <img
+            src={image}
+            alt={`${title} preview ${index + 1}`}
+            loading={index === 0 ? "eager" : "lazy"}
+            decoding="async"
+          />
         </div>
       ))}
     </div>

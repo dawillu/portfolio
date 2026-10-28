@@ -13,7 +13,12 @@ const TuesdaysWithMorrie: React.FC = () => {
 
         <div className={styles.mainContainer}>
           <div className={styles.imgContainer}>
-            <img src="/assets/images/tuesdaysWithMorrie/book.jpg" alt="" />
+            <img
+              src="/assets/images/tuesdaysWithMorrie/book.jpg"
+              alt="Book cover of Tuesdays With Morrie"
+              decoding="async"
+              fetchPriority="high"
+            />
           </div>
           <div className={styles.description}>
             <div className={styles.subheading}>1. A Book by Mitch Albom</div>

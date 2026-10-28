@@ -96,6 +96,14 @@ const ProjectsSection: React.FC = () => {
     return () => clearInterval(intervalId);
   }, [isRotating, rotateImage]);
 
+  useEffect(() => {
+    // Fetch only the next carousel image so the next transition is instant
+    // without downloading every project image on the initial page load.
+    const nextProject = projects[(currentIndex + 1) % projects.length];
+    const image = new Image();
+    image.src = nextProject.image;
+  }, [currentIndex]);
+
   const handleProjectHover = (index: number) => {
     setIsRotating(false);
     setImageOpacity(0);
@@ -121,6 +129,8 @@ const ProjectsSection: React.FC = () => {
               transition: "opacity 0.3s ease-in-out",
               width: "100%",
             }}
+            decoding="async"
+            fetchPriority="high"
           />
         </div>
         <div id="projects-title-container">

@@ -67,7 +67,12 @@ const LifeAtPark: React.FC = () => {
           <div className={styles.grid}>
             {teamMembers.map((member) => (
               <div className={styles.cell} key={member.name}>
-                <img src={member.src} alt={member.name} />
+                <img
+                  src={member.src}
+                  alt={member.name}
+                  loading="lazy"
+                  decoding="async"
+                />
                 <div className={styles.nameOverlay}>{member.name}</div>
               </div>
             ))}
@@ -122,9 +127,9 @@ const LifeAtPark: React.FC = () => {
         </div>
         <a href="https://www.figma.com/proto/Hn1FlwLxKqbrMCmRIRjlF2/Prototipo-high-fidelity?node-id=0-1&t=Ry4JKZDZ5DIN4eQY-1" target="_blank" rel="noopener noreferrer">
           <div className={styles.prototypeImg}>
-            <img data-animation="down-up" src="/assets/images/lifeAtPark/prototype1.png" alt="" />
-            <img data-animation="down-up" src="/assets/images/lifeAtPark/prototype2.png" alt="" />
-            <img data-animation="down-up" src="/assets/images/lifeAtPark/prototype3.png" alt="" />
+            <img data-animation="down-up" src="/assets/images/lifeAtPark/prototype1.png" alt="" loading="lazy" decoding="async" />
+            <img data-animation="down-up" src="/assets/images/lifeAtPark/prototype2.png" alt="" loading="lazy" decoding="async" />
+            <img data-animation="down-up" src="/assets/images/lifeAtPark/prototype3.png" alt="" loading="lazy" decoding="async" />
           </div>
         </a>
 
@@ -137,7 +142,13 @@ const LifeAtPark: React.FC = () => {
         <div className={styles.survey}>
           <div>
             <a href="https://docs.google.com/forms/d/e/1FAIpQLSc4YDRMrtARfVPhlR8FwKlLJ66sy3SC5on4Ehehqk1Ivn9Xyw/viewform?usp=dialog" target="_blank">
-              <img data-animation="fade-in-right" src="/assets/images/lifeAtPark/survey.png"/>
+              <img
+                data-animation="fade-in-right"
+                src="/assets/images/lifeAtPark/survey.png"
+                alt="Survey results"
+                loading="lazy"
+                decoding="async"
+              />
             </a>
           </div>
         </div>

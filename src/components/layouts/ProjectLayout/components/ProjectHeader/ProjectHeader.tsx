@@ -79,7 +79,13 @@ const ProjectHeader: React.FC<ProjectHeaderProps> = ({
           <source src={logoUrl} type="video/mp4" />
         </video>
       ) : (
-        <img src={logoUrl} alt={`${title} logo`} loading="eager" />
+        <img
+          src={logoUrl}
+          alt={`${title} logo`}
+          loading="eager"
+          decoding="async"
+          fetchPriority="high"
+        />
       )}
 
       <div id="link-info">

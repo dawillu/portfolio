@@ -27,6 +27,8 @@ const Footer: React.FC = () => {
             className="social-icon"
             src="/assets/socials/github.svg"
             alt="GitHub Icon"
+            loading="lazy"
+            decoding="async"
           />
         </a>
         <a
@@ -39,6 +41,8 @@ const Footer: React.FC = () => {
             className="social-icon"
             src="/assets/socials/instagram.svg"
             alt="Instagram Icon"
+            loading="lazy"
+            decoding="async"
           />
         </a>
         <a
@@ -51,6 +55,8 @@ const Footer: React.FC = () => {
             className="social-icon"
             src="/assets/socials/linkedin.svg"
             alt="LinkedIn Icon"
+            loading="lazy"
+            decoding="async"
           />
         </a>
         <a
@@ -63,6 +69,8 @@ const Footer: React.FC = () => {
             className="social-icon"
             src="/assets/socials/x.svg"
             alt="X Icon"
+            loading="lazy"
+            decoding="async"
           />
         </a>
       </div>

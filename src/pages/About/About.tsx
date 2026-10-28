@@ -78,7 +78,11 @@ const About: React.FC = () => {
           Bottom-Left
         </div>
         <div className={`flying-disk ${isPlaying ? "spinning" : ""}`} onClick={handleDiskClick}>
-          <img src="/assets/images/about/disk.png" alt="Music disk" />
+          <img
+            src="/assets/images/about/disk.png"
+            alt="Music disk"
+            decoding="async"
+          />
         </div>
         <div className="song-name-credit">
           🎵
@@ -109,7 +113,12 @@ const About: React.FC = () => {
               {images.map((image, index) => (
                 <div key={index} className="photo">
                   <div className="photo-wrapper">
-                    <img src={image.src} loading="lazy" />
+                    <img
+                      src={image.src}
+                      alt=""
+                      loading="lazy"
+                      decoding="async"
+                    />
                   </div>
                 </div>
               ))}
